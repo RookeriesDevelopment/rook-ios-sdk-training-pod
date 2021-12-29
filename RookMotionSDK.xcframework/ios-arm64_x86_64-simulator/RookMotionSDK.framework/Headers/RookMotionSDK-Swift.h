@@ -193,6 +193,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 @import AAInfographics;
 @import CoreGraphics;
 @import Foundation;
+@import ObjectiveC;
 @import Realm;
 @import UIKit;
 #endif
@@ -280,6 +281,20 @@ SWIFT_CLASS("_TtC13RookMotionSDK22RMHeartRateDataRecords")
 @end
 
 
+SWIFT_CLASS("_TtC13RookMotionSDK13RMRemoteClass")
+@interface RMRemoteClass : RealmSwiftObject
+@property (nonatomic) NSInteger id;
+@property (nonatomic, copy) NSString * _Nonnull classUUID;
+@property (nonatomic, copy) NSString * _Nonnull roomUUID;
+@property (nonatomic, copy) NSString * _Nonnull trainingName;
+@property (nonatomic) NSInteger classDelay;
+@property (nonatomic) NSInteger useSteps;
+@property (nonatomic, copy) NSString * _Nonnull stepOptions;
++ (NSString * _Nullable)primaryKey SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
 SWIFT_CLASS("_TtC13RookMotionSDK14RMRewardRecord")
 @interface RMRewardRecord : RealmSwiftObject
 @property (nonatomic, copy) NSString * _Nonnull rewardTypeUUID;
@@ -321,6 +336,13 @@ SWIFT_CLASS("_TtC13RookMotionSDK17RMStepDataRecords")
 @interface RMStepDataRecords (SWIFT_EXTENSION(RookMotionSDK))
 @property (nonatomic, readonly, copy) NSString * _Nonnull description;
 @end
+
+
+SWIFT_CLASS("_TtC13RookMotionSDK16RMStorageManager")
+@interface RMStorageManager : NSObject
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
 
 @class RMTrainingSummaries;
 @class RMTrainingStoragedRecords;
@@ -383,6 +405,7 @@ SWIFT_CLASS("_TtC13RookMotionSDK14RMTrainingInfo")
 @property (nonatomic, strong) RMAuxiliarSummary * _Nullable auxSummary;
 @property (nonatomic, strong) RMTrainingSummaries * _Nullable summary;
 @property (nonatomic, strong) RMTrainingStoragedRecords * _Nullable records;
+@property (nonatomic, strong) RMRemoteClass * _Nullable remoteClass;
 + (NSString * _Nullable)primaryKey SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
@@ -479,7 +502,11 @@ SWIFT_CLASS("_TtC13RookMotionSDK14RMTrainingType")
 @class RMUserPhysiologicalVariables;
 
 /// The RMUser class is a realm model that conform the Codable protocol, this model is used to store the information of a user.
-/// <h1>Properties:</h1>
+/// <ul>
+///   <li>
+///     Properties:
+///   </li>
+/// </ul>
 /// <ol>
 ///   <li>
 ///     userUUID : String
@@ -509,8 +536,13 @@ SWIFT_CLASS("_TtC13RookMotionSDK14RMTrainingType")
 ///     sex: String (male or female)
 ///   </li>
 ///   <li>
-///     <h1>physiologicalVariables</h1>
+///     pseudonym: String
 ///   </li>
+///   <li>
+///     physiologicalVariables
+///   </li>
+/// </ol>
+/// <ul>
 ///   <li>
 ///     weight: String number from 30 to 200
 ///   </li>
@@ -520,8 +552,8 @@ SWIFT_CLASS("_TtC13RookMotionSDK14RMTrainingType")
 ///   <li>
 ///     restingHeartRate: String number from 40 to 100
 ///   </li>
-/// </ol>
-/// <h1>Methods:</h1>
+/// </ul>
+/// Methods:
 /// <ul>
 ///   <li>
 ///     updatePhysiologicalVariables
@@ -542,7 +574,9 @@ SWIFT_CLASS("_TtC13RookMotionSDK6RMUser")
 @property (nonatomic, copy) NSString * _Nullable phone;
 @property (nonatomic, copy) NSString * _Nullable birthday;
 @property (nonatomic, copy) NSString * _Nullable sex;
+@property (nonatomic, copy) NSString * _Nullable pseudonym;
 @property (nonatomic, strong) RMUserPhysiologicalVariables * _Nullable physiologicalVariables;
+@property (nonatomic) BOOL updatePending;
 + (NSString * _Nullable)primaryKey SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
@@ -765,6 +799,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 @import AAInfographics;
 @import CoreGraphics;
 @import Foundation;
+@import ObjectiveC;
 @import Realm;
 @import UIKit;
 #endif
@@ -852,6 +887,20 @@ SWIFT_CLASS("_TtC13RookMotionSDK22RMHeartRateDataRecords")
 @end
 
 
+SWIFT_CLASS("_TtC13RookMotionSDK13RMRemoteClass")
+@interface RMRemoteClass : RealmSwiftObject
+@property (nonatomic) NSInteger id;
+@property (nonatomic, copy) NSString * _Nonnull classUUID;
+@property (nonatomic, copy) NSString * _Nonnull roomUUID;
+@property (nonatomic, copy) NSString * _Nonnull trainingName;
+@property (nonatomic) NSInteger classDelay;
+@property (nonatomic) NSInteger useSteps;
+@property (nonatomic, copy) NSString * _Nonnull stepOptions;
++ (NSString * _Nullable)primaryKey SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
 SWIFT_CLASS("_TtC13RookMotionSDK14RMRewardRecord")
 @interface RMRewardRecord : RealmSwiftObject
 @property (nonatomic, copy) NSString * _Nonnull rewardTypeUUID;
@@ -893,6 +942,13 @@ SWIFT_CLASS("_TtC13RookMotionSDK17RMStepDataRecords")
 @interface RMStepDataRecords (SWIFT_EXTENSION(RookMotionSDK))
 @property (nonatomic, readonly, copy) NSString * _Nonnull description;
 @end
+
+
+SWIFT_CLASS("_TtC13RookMotionSDK16RMStorageManager")
+@interface RMStorageManager : NSObject
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
 
 @class RMTrainingSummaries;
 @class RMTrainingStoragedRecords;
@@ -955,6 +1011,7 @@ SWIFT_CLASS("_TtC13RookMotionSDK14RMTrainingInfo")
 @property (nonatomic, strong) RMAuxiliarSummary * _Nullable auxSummary;
 @property (nonatomic, strong) RMTrainingSummaries * _Nullable summary;
 @property (nonatomic, strong) RMTrainingStoragedRecords * _Nullable records;
+@property (nonatomic, strong) RMRemoteClass * _Nullable remoteClass;
 + (NSString * _Nullable)primaryKey SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
@@ -1051,7 +1108,11 @@ SWIFT_CLASS("_TtC13RookMotionSDK14RMTrainingType")
 @class RMUserPhysiologicalVariables;
 
 /// The RMUser class is a realm model that conform the Codable protocol, this model is used to store the information of a user.
-/// <h1>Properties:</h1>
+/// <ul>
+///   <li>
+///     Properties:
+///   </li>
+/// </ul>
 /// <ol>
 ///   <li>
 ///     userUUID : String
@@ -1081,8 +1142,13 @@ SWIFT_CLASS("_TtC13RookMotionSDK14RMTrainingType")
 ///     sex: String (male or female)
 ///   </li>
 ///   <li>
-///     <h1>physiologicalVariables</h1>
+///     pseudonym: String
 ///   </li>
+///   <li>
+///     physiologicalVariables
+///   </li>
+/// </ol>
+/// <ul>
 ///   <li>
 ///     weight: String number from 30 to 200
 ///   </li>
@@ -1092,8 +1158,8 @@ SWIFT_CLASS("_TtC13RookMotionSDK14RMTrainingType")
 ///   <li>
 ///     restingHeartRate: String number from 40 to 100
 ///   </li>
-/// </ol>
-/// <h1>Methods:</h1>
+/// </ul>
+/// Methods:
 /// <ul>
 ///   <li>
 ///     updatePhysiologicalVariables
@@ -1114,7 +1180,9 @@ SWIFT_CLASS("_TtC13RookMotionSDK6RMUser")
 @property (nonatomic, copy) NSString * _Nullable phone;
 @property (nonatomic, copy) NSString * _Nullable birthday;
 @property (nonatomic, copy) NSString * _Nullable sex;
+@property (nonatomic, copy) NSString * _Nullable pseudonym;
 @property (nonatomic, strong) RMUserPhysiologicalVariables * _Nullable physiologicalVariables;
+@property (nonatomic) BOOL updatePending;
 + (NSString * _Nullable)primaryKey SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end

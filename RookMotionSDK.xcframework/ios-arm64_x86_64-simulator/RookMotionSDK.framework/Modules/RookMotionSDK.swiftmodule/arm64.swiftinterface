@@ -24,6 +24,7 @@ import UIKit
   @objc dynamic public var auxSummary: RookMotionSDK.RMAuxiliarSummary?
   @objc dynamic public var summary: RookMotionSDK.RMTrainingSummaries?
   @objc dynamic public var records: RookMotionSDK.RMTrainingStoragedRecords?
+  @objc dynamic public var remoteClass: RookMotionSDK.RMRemoteClass?
   public var summaries: RealmSwift.List<RookMotionSDK.RMTrainingSummary>
   @objc override public static func primaryKey() -> Swift.String?
   public enum CodingKeys : Swift.String, Swift.CodingKey {
@@ -58,6 +59,7 @@ extension RMStorageManager {
   public func readUserInfo() -> RookMotionSDK.RMUser?
   public func getUserUUID() -> Swift.String?
   public func getUserToken() -> Swift.String?
+  public func getUserPseudonym() -> Swift.String?
   public func storeSensor(sensor: RookMotionSDK.RMSensorAPI) throws
   public func deleteAllSensors()
   public func readSensorsList() -> [RookMotionSDK.RMSensorAPI]
@@ -67,6 +69,7 @@ extension RMStorageManager {
   public func deleteAllTrainingTypes()
   public func readTrainingTypesList() -> [RookMotionSDK.RMTrainingType]
   public func getPendingTrainings() -> [RookMotionSDK.RMTrainingInfo]
+  public func getTrainingsToUpload() -> [RookMotionSDK.RMTrainingInfo]
   public func getTrainingWithStart(_ start: Swift.String) -> RookMotionSDK.RMTrainingInfo?
   public func getUnfinishedTrainings() -> [RookMotionSDK.RMTrainingInfo]
 }
@@ -102,6 +105,19 @@ public func preciseRound(_ value: Swift.Float, precision: RookMotionSDK.Rounding
   @objc deinit
   @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
   @objc required dynamic public init?(coder: Foundation.NSCoder)
+}
+@objc @_inheritsConvenienceInitializers public class RMRemoteClass : RealmSwift.Object {
+  @objc dynamic public var id: Swift.Int
+  @objc dynamic public var classUUID: Swift.String
+  @objc dynamic public var roomUUID: Swift.String
+  @objc dynamic public var trainingName: Swift.String
+  @objc dynamic public var classDelay: Swift.Int
+  @objc dynamic public var useSteps: Swift.Int
+  @objc dynamic public var stepOptions: Swift.String
+  @objc override public static func primaryKey() -> Swift.String?
+  convenience required public init(classUUID: Swift.String, roomUUID: Swift.String, trainingName: Swift.String, classDelay: Swift.Int, useSteps: Swift.Int, stepOptions: Swift.String)
+  @objc deinit
+  @objc override dynamic public init()
 }
 public struct RMRegisteredBranch : Swift.Decodable {
   public let branchUUID: Swift.String
@@ -266,8 +282,9 @@ public struct RMRegisteredCenter : Swift.Decodable {
   public init(from decoder: Swift.Decoder) throws
 }
 public struct RMRoomsToLink : Swift.Encodable {
-  public let rooms: [RookMotionSDK.RMRoom]
-  public init(rooms: [RookMotionSDK.RMRoom])
+  public let branchUUID: Swift.String
+  public let rooms: [RookMotionSDK.RMRoom]?
+  public init(rooms: [RookMotionSDK.RMRoom]?, branchUUID: Swift.String)
   public func encode(to encoder: Swift.Encoder) throws
 }
 public struct RMCenterLocation : Swift.Decodable {
@@ -302,7 +319,7 @@ final public class RMSensorManager : CoreBluetooth.CBCentralManagerDelegate {
   @objc final public var description: Swift.String
   final public let serviceArray: [CoreBluetooth.CBUUID]
   final public let servicesArrayWithoutSteps: [CoreBluetooth.CBUUID]
-  final public var caract_battery: CoreBluetooth.CBCharacteristic!
+  final public var caract_battery: CoreBluetooth.CBCharacteristic?
   final public var isSearching: Swift.Bool
   final public var stepsReadingEnabled: Swift.Bool
   weak final public var connectionDelegate: RookMotionSDK.RMSensorConnectionCallback?
@@ -319,6 +336,7 @@ final public class RMSensorManager : CoreBluetooth.CBCentralManagerDelegate {
   @objc final public func centralManager(_ central: CoreBluetooth.CBCentralManager, didDiscover peripheral: CoreBluetooth.CBPeripheral, advertisementData: [Swift.String : Any], rssi RSSI: Foundation.NSNumber)
   @objc final public func centralManager(_ central: CoreBluetooth.CBCentralManager, didConnect peripheral: CoreBluetooth.CBPeripheral)
   @objc final public func centralManager(_ central: CoreBluetooth.CBCentralManager, didDisconnectPeripheral peripheral: CoreBluetooth.CBPeripheral, error: Swift.Error?)
+  @objc final public func centralManager(_ central: CoreBluetooth.CBCentralManager, didFailToConnect peripheral: CoreBluetooth.CBPeripheral, error: Swift.Error?)
   @objc final public func isEqual(_ object: Any?) -> Swift.Bool
   @objc final public var superclass: Swift.AnyClass?
   @objc final public func `self`() -> Self
@@ -362,8 +380,8 @@ public struct RMCenterRooms : Swift.Decodable {
 @objc @_inheritsConvenienceInitializers public class OptionalInt : RealmSwift.Object, Swift.Codable {
   public var numeric: RealmSwift.RealmOptional<Swift.Int>
   required convenience public init(from decoder: Swift.Decoder) throws
-  @objc deinit
   @objc override dynamic public init()
+  @objc deinit
   public func encode(to encoder: Swift.Encoder) throws
 }
 public protocol RMTrainingCallback {
@@ -381,6 +399,7 @@ public protocol RMTrainingCallback {
   final public let sensorManager: RookMotionSDK.RMSensorManager
   final public let storageManager: RookMotionSDK.RMStorageManager
   public var training: RookMotionSDK.RMTrainingInfo
+  public var remoteClass: RookMotionSDK.RMRemoteClass?
   public var rookLogoImageView: UIKit.UIImageView {
     get
     set
@@ -409,6 +428,7 @@ public protocol RMTrainingCallback {
   public func onStepsReceived(steps: Swift.Int, cadence: Swift.Float, deltaSteps: Swift.Int)
   public func onBatteryReceived(batteryLevel: Swift.Int)
   public func runTimer()
+  public func scheduleWatchdog()
   public func starTimerReconnection()
   public func stopTimerReconnection()
   public func loadUnfinishedTraining()
@@ -557,9 +577,9 @@ public struct RMTrainingAuxiliarSummary {
 @objc @_inheritsConvenienceInitializers public class UseSteps : RealmSwift.Object, Swift.Codable {
   @objc dynamic public var enabled: RookMotionSDK.OptionalInt?
   @objc dynamic public var stepsTypes: Swift.String?
-  @objc deinit
   @objc override dynamic public init()
   required public init(from decoder: Swift.Decoder) throws
+  @objc deinit
   public func encode(to encoder: Swift.Encoder) throws
 }
 public struct RMReward : Swift.Codable {
@@ -617,10 +637,13 @@ public struct RMRegisteredChain : Swift.Decodable {
   @objc dynamic public var phone: Swift.String?
   @objc dynamic public var birthday: Swift.String?
   @objc dynamic public var sex: Swift.String?
+  @objc dynamic public var pseudonym: Swift.String?
   @objc dynamic public var physiologicalVariables: RookMotionSDK.RMUserPhysiologicalVariables?
+  @objc dynamic public var updatePending: Swift.Bool
   @objc override public static func primaryKey() -> Swift.String?
   public func updatePhysiologicalVariables(weight: Swift.Double, height: Swift.Double, restingHeartRate: Swift.Int)
-  public func updateUserProperties(name: Swift.String?, lastName1: Swift.String?, lastName2: Swift.String?, phone: Swift.String?, birthday: Swift.String?, sex: Swift.String?)
+  public func setUserUpdatePending(with updatePending: Swift.Bool)
+  public func updateUserProperties(name: Swift.String?, lastName1: Swift.String?, lastName2: Swift.String?, phone: Swift.String?, birthday: Swift.String?, sex: Swift.String?, pseudonym: Swift.String?)
   @objc deinit
   @objc override dynamic public init()
   required public init(from decoder: Swift.Decoder) throws
@@ -668,10 +691,10 @@ public class CalculateDeltaTime {
     }
     public init?(intValue: Swift.Int)
   }
+  public func encode(to encoder: Swift.Encoder) throws
   @objc override dynamic public init()
   required public init(from decoder: Swift.Decoder) throws
   @objc deinit
-  public func encode(to encoder: Swift.Encoder) throws
 }
 extension RMHeartRateDataRecords {
   @objc override dynamic public var description: Swift.String {
@@ -703,10 +726,12 @@ public class RMSettings {
   public func setCredentials(client_key: Swift.String, token: Swift.String)
   public func setUrlApi(with url: Swift.String)
   public func getURLApi() -> Swift.String
+  public func setUrlRemote(with url: Swift.String)
+  public func getURLRemote() -> Swift.String
   @objc deinit
 }
-public class RMStorageManager {
-  public init()
+@objc @_inheritsConvenienceInitializers public class RMStorageManager : ObjectiveC.NSObject {
+  @objc override dynamic public init()
   public func saveStepRecord(object: RookMotionSDK.RMStepDataRecords)
   public func saveHeartRateRecord(object: RookMotionSDK.RMHeartRateDataRecords)
   public func saveTrainingInfoRecord(object: RookMotionSDK.RMTrainingInfo)
@@ -738,6 +763,7 @@ public class RMStorageManager {
   public func updateTrainingAuxSummaries(_ training: RookMotionSDK.RMTrainingInfo, auxSummary: RookMotionSDK.RMTrainingAuxiliarSummary)
   public func updateTrainingSensorProperties(name: Swift.String?, sensorUUID: Swift.String?, training: RookMotionSDK.RMTrainingInfo)
   public func updateTrainingUploadDate(for training: RookMotionSDK.RMTrainingInfo)
+  public func updateTrainingInfo(classUUID: Swift.String, roomUUID: Swift.String, trainingName: Swift.String, classDelay: Swift.Int, useSteps: Swift.Int, stepOptions: Swift.String, _ training: RookMotionSDK.RMTrainingInfo)
   public func storeTrainingPreferences(_ preference: RookMotionSDK.RMTrainingPreferences)
   public func readTrainingPreferences() -> RookMotionSDK.RMTrainingPreferences?
   public func getLastUsedTrainingType() -> RookMotionSDK.RMTrainingType?
@@ -783,13 +809,13 @@ extension RMRewardRecord {
   required public init(from decoder: Swift.Decoder) throws
   public func encode(to encoder: Swift.Encoder) throws
 }
-@_hasMissingDesignatedInitializers public class RMHrDerivedRecord : Swift.Codable {
+public struct RMHrDerivedRecord : Swift.Codable {
   public var timestamp: Swift.String?
   public var heartRate: Swift.Int?
   public var calories: Swift.Float?
   public var effort: Swift.Float?
   public var heartRateVariability: Swift.Int?
-  convenience public init(timestamp: Swift.String? = nil, heartRate: Swift.Int? = nil, calories: Swift.Float? = nil, effort: Swift.Float? = nil, heartRateVariability: Swift.Int? = nil)
+  public init(timestamp: Swift.String? = nil, heartRate: Swift.Int? = nil, calories: Swift.Float? = nil, effort: Swift.Float? = nil, heartRateVariability: Swift.Int? = nil)
   public enum CodingKeys : Swift.String, Swift.CodingKey {
     case timestamp
     case heartRate
@@ -809,14 +835,49 @@ extension RMRewardRecord {
     }
     public init?(intValue: Swift.Int)
   }
-  required public init(from decoder: Swift.Decoder) throws
-  @objc deinit
+  public init(from decoder: Swift.Decoder) throws
   public func encode(to encoder: Swift.Encoder) throws
 }
 extension RMHrDerivedRecord : Swift.CustomStringConvertible {
   public var description: Swift.String {
     get
   }
+}
+public enum LogLevel : Swift.String {
+  case info
+  case error
+  public typealias RawValue = Swift.String
+  public init?(rawValue: Swift.String)
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum eventElastic : Swift.String {
+  case trainingRejected
+  case trainingUploaded
+  case requestTrainingList
+  case userBanned
+  case tokenExpired
+  case requestRemoteRooms
+  case loginUser
+  case logOut
+  public typealias RawValue = Swift.String
+  public init?(rawValue: Swift.String)
+  public var rawValue: Swift.String {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers public class RMElasticLoggerManager {
+  public static let getInstance: RookMotionSDK.RMElasticLoggerManager
+  public func sendTokenExpEvent(logLevel: RookMotionSDK.LogLevel, userUUID: Swift.String, eventName: RookMotionSDK.eventElastic, statusCode: Swift.Int, messageResponse: Swift.String)
+  public func sendLogInEvent(logLevel: RookMotionSDK.LogLevel, userUUID: Swift.String, eventName: RookMotionSDK.eventElastic, statusCode: Swift.Int, messageResponse: Swift.String)
+  public func sendLogoutEvent(logLevel: RookMotionSDK.LogLevel, userUUID: Swift.String, eventName: RookMotionSDK.eventElastic, statusCode: Swift.Int, messageResponse: Swift.String)
+  @objc deinit
+}
+public class RMLoggerRequestManager {
+  public static let shared: RookMotionSDK.RMLoggerRequestManager
+  public init()
+  @objc deinit
 }
 public class RMNetwork {
   public init()
@@ -840,6 +901,7 @@ extension RMSensorManager : CoreBluetooth.CBPeripheralDelegate {
   @objc final public func peripheral(_ peripheral: CoreBluetooth.CBPeripheral, didUpdateValueFor characteristic: CoreBluetooth.CBCharacteristic, error: Swift.Error?)
   @objc final public func peripheral(_ peripheral: CoreBluetooth.CBPeripheral, didUpdateNotificationStateFor characteristic: CoreBluetooth.CBCharacteristic, error: Swift.Error?)
   @objc final public func peripheralIsReady(toSendWriteWithoutResponse peripheral: CoreBluetooth.CBPeripheral)
+  @objc final public func peripheralDidUpdateName(_ peripheral: CoreBluetooth.CBPeripheral)
   final public func resetStepsCount()
 }
 public struct RMCenterMultimedia : Swift.Decodable {
@@ -858,13 +920,13 @@ public class RMApi {
   public func setUserMembership(membershipID: Swift.String, userUUID: Swift.String, completion: @escaping (Swift.Int) -> Swift.Void)
   public func addUserPhysiologicalVariables(weight: Swift.Double, height: Swift.Double, resting_heart_rate: Swift.Int, userUUID: Swift.String, completion: @escaping (Swift.Int, Swift.String) -> Swift.Void)
   public func getUserInformation(UUID: Swift.String, completion: @escaping (Swift.Int, Swift.String) -> Swift.Void)
-  public func updateUserInformation(userUUID: Swift.String, name: Swift.String, last_name: Swift.String?, mother_last_name: Swift.String?, birthday: Swift.String, sex: Swift.String, completion: @escaping (Swift.Int, Swift.String) -> Swift.Void)
+  public func updateUserInformation(userUUID: Swift.String, name: Swift.String, last_name: Swift.String?, mother_last_name: Swift.String?, birthday: Swift.String, sex: Swift.String, pseudonym: Swift.String? = nil, completion: @escaping (Swift.Int, Swift.String) -> Swift.Void)
   public func addSensorToUser(sensor_name: Swift.String, sensor_mac: Swift.String, ownership_type: Swift.String, userUUID: Swift.String, completion: @escaping (Swift.Int, Swift.String) -> Swift.Void)
   public func removeUserSensor(userUUID: Swift.String, sensorUUID: Swift.String, completion: @escaping (Swift.Int) -> Swift.Void)
   public func retrieveSensorsFromUser(userUUID: Swift.String, completion: @escaping (Swift.Int, Swift.String, Swift.Int) -> Swift.Void)
   public func retrieveClientUsers(completion: @escaping (Swift.Int, Swift.String, Swift.Int) -> Swift.Void)
   public func retrieveUserPhysiologicalVariables(userUUID: Swift.String, from startDate: Foundation.Date? = nil, to endDate: Foundation.Date? = nil, completion: @escaping (Swift.Int, Swift.String, Swift.Int) -> Swift.Void)
-  public func addTraintingToUser(userUUID: Swift.String, training: RookMotionSDK.RMTrainingRetrived, completion: @escaping (Swift.Int, Swift.String, Swift.String) -> Swift.Void)
+  public func addTrainingToUser(userUUID: Swift.String, training: RookMotionSDK.RMTrainingRetrived, completion: @escaping (Swift.Int, Swift.String, Swift.String) -> Swift.Void)
   public func addPendingTrainingToUser(userUUID: Swift.String, training: RookMotionSDK.RMTrainingInfo, completion: @escaping (Swift.Int, Swift.String, Swift.String) -> Swift.Void)
   public func retrieveTrainingsFromUser(userUUID: Swift.String, from startDate: Foundation.Date? = nil, to endDate: Foundation.Date? = nil, completion: @escaping (Swift.Int, Swift.String, Swift.Int) -> Swift.Void)
   public func retrieveSummariesType(completion: @escaping (Swift.Int, Swift.String, Swift.Int) -> Swift.Void)
@@ -875,8 +937,13 @@ public class RMApi {
   public func retrieveUserRewards(userUUID: Swift.String, from startDate: Foundation.Date? = nil, to endDate: Foundation.Date? = nil, completion: @escaping (Swift.Int, Swift.String, Swift.Int) -> Swift.Void)
   public func getClientCenters(completion: @escaping (Swift.Int, Swift.String?) -> Swift.Void)
   public func retrieveRegisteredCentersForUser(userUUID: Swift.String, completion: @escaping (Swift.Int, Swift.String?) -> Swift.Void)
-  public func linkUserToCenterRooms(userUUID: Swift.String, roomsUUID: [Swift.String], completion: @escaping (Swift.Int, Swift.String?) -> Swift.Void)
-  public func unlinkUserFromRoom(userUUID: Swift.String, roomUUID: Swift.String, completion: @escaping (Swift.Int) -> Swift.Void)
+  public func retrieveCenterInformation(centerUUID: Swift.String, completion: @escaping (Swift.Int, Swift.String?) -> Swift.Void)
+  public func linkUserToCenterRooms(userUUID: Swift.String, branchUUID: Swift.String, roomsUUID: [Swift.String]?, completion: @escaping (Swift.Int, Swift.String?) -> Swift.Void)
+  public func unlinkUserFromBranch(userUUID: Swift.String, branchUUID: Swift.String, completion: @escaping (Swift.Int) -> Swift.Void)
+  public func retrieveRemoteRooms(userUUID: Swift.String, completion: @escaping (Swift.Int, Swift.String?) -> Swift.Void)
+  public func connectUserToClass(classUUID: Swift.String, userUUID: Swift.String, completion: @escaping (Swift.Int, Swift.String?) -> Swift.Void)
+  public func sendRealTimeData(user: RookMotionSDK.RMUser, imageUserUrl: Swift.String? = nil, pseudonym: Swift.String, stepsTot: Swift.Int, caloriesTot: Swift.Int, hr: Swift.Int, effort: Swift.Int, classUUID: Swift.String, retriveUsersList: Swift.Bool = false, completion: @escaping (Swift.Int, Swift.String?) -> Swift.Void)
+  public func disconnectUserFromClass(classUUID: Swift.String, userUUID: Swift.String, completion: @escaping (Swift.Int, Swift.String?) -> Swift.Void)
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers public class RMSensorAPI : RealmSwift.Object, Swift.Codable {
@@ -912,3 +979,9 @@ extension RookMotionSDK.RMHeartRateDataRecords.CodingKeys : Swift.RawRepresentab
 extension RookMotionSDK.RMHrDerivedRecord.CodingKeys : Swift.Equatable {}
 extension RookMotionSDK.RMHrDerivedRecord.CodingKeys : Swift.Hashable {}
 extension RookMotionSDK.RMHrDerivedRecord.CodingKeys : Swift.RawRepresentable {}
+extension RookMotionSDK.LogLevel : Swift.Equatable {}
+extension RookMotionSDK.LogLevel : Swift.Hashable {}
+extension RookMotionSDK.LogLevel : Swift.RawRepresentable {}
+extension RookMotionSDK.eventElastic : Swift.Equatable {}
+extension RookMotionSDK.eventElastic : Swift.Hashable {}
+extension RookMotionSDK.eventElastic : Swift.RawRepresentable {}

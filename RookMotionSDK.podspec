@@ -2,7 +2,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "RookMotionSDK"
-  spec.version      = "1.0.0"
+  spec.version      = "1.0.1"
   spec.summary      = "RookMotion iOS Lib"
 
   spec.description  = "RookMotion iOS sdk allows the implementation of the RookMotion functionalities required to add training measurement, tracking, and analysis to an iOS APP"
