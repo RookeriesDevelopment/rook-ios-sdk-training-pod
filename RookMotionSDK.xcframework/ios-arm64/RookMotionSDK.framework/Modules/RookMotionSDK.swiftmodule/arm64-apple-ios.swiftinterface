@@ -12,6 +12,30 @@ import Swift
 import SwiftyJSON
 import SystemConfiguration
 import UIKit
+import WatchConnectivity
+public enum TypeMessage : Swift.String {
+  case syncUser
+  case refreshToken
+  case logout
+  case training
+  public typealias RawValue = Swift.String
+  public init?(rawValue: Swift.String)
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public struct WatchMessage : RookMotionSDK.Convertable {
+  public let type: Swift.String
+  public let data: [Swift.String : Any]
+  public init(type: Swift.String, data: [Swift.String : Any])
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+public protocol Convertable : Swift.Decodable, Swift.Encodable {
+}
+extension Convertable {
+  public func convertToDict() -> [Swift.String : Any]
+}
 @objc @_inheritsConvenienceInitializers public class RMTrainingInfo : RealmSwift.Object, Swift.Codable {
   @objc dynamic public var start: Swift.String?
   @objc dynamic public var end: Swift.String?
@@ -329,7 +353,7 @@ final public class RMSensorManager : CoreBluetooth.CBCentralManagerDelegate {
   final public func startDiscovery()
   final public func stopDiscovery()
   final public func connect(device: CoreBluetooth.CBPeripheral)
-  final public func disconnect(device: CoreBluetooth.CBPeripheral)
+  final public func disconnect(device: CoreBluetooth.CBPeripheral?)
   final public func enableStepsReading()
   final public func connectionStatus() -> Swift.Int?
   @objc final public func centralManagerDidUpdateState(_ central: CoreBluetooth.CBCentralManager)
@@ -730,6 +754,7 @@ public class RMSettings {
   public func getURLRemote() -> Swift.String
   public func setUrlGamification(with url: Swift.String)
   public func getURLGamification() -> Swift.String
+  public func initRookMotionSDK()
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers public class RMStorageManager : ObjectiveC.NSObject {
@@ -904,6 +929,12 @@ public class RMNetwork {
   required public init(from decoder: Swift.Decoder) throws
   public func encode(to encoder: Swift.Encoder) throws
 }
+public struct JSONCodingKeys : Swift.CodingKey {
+  public var stringValue: Swift.String
+  public init(stringValue: Swift.String)
+  public var intValue: Swift.Int?
+  public init?(intValue: Swift.Int)
+}
 extension RMSensorManager : CoreBluetooth.CBPeripheralDelegate {
   @objc final public func peripheral(_ peripheral: CoreBluetooth.CBPeripheral, didDiscoverServices error: Swift.Error?)
   @objc final public func peripheral(_ peripheral: CoreBluetooth.CBPeripheral, didDiscoverCharacteristicsFor service: CoreBluetooth.CBService, error: Swift.Error?)
@@ -912,6 +943,27 @@ extension RMSensorManager : CoreBluetooth.CBPeripheralDelegate {
   @objc final public func peripheralIsReady(toSendWriteWithoutResponse peripheral: CoreBluetooth.CBPeripheral)
   @objc final public func peripheralDidUpdateName(_ peripheral: CoreBluetooth.CBPeripheral)
   final public func resetStepsCount()
+}
+@objc public protocol CommunicationDelegate : AnyObject {
+  @objc func session(_ session: WatchConnectivity.WCSession, messageData: [Swift.String : Any])
+  @objc func session(_ session: WatchConnectivity.WCSession, userInfo: [Swift.String : Any])
+  @objc optional func session(_ session: WatchConnectivity.WCSession, message: [Swift.String : Any])
+}
+@objc @_inheritsConvenienceInitializers public class RMCommunicationManager : ObjectiveC.NSObject {
+  public static let shared: RookMotionSDK.RMCommunicationManager
+  weak public var delegate: RookMotionSDK.CommunicationDelegate?
+  @objc override dynamic public init()
+  public func configureSession()
+  public func syncUserInfo()
+  public func refreshTokenWatch()
+  @objc deinit
+}
+extension RMCommunicationManager : WatchConnectivity.WCSessionDelegate {
+  @objc dynamic public func sessionDidBecomeInactive(_ session: WatchConnectivity.WCSession)
+  @objc dynamic public func sessionDidDeactivate(_ session: WatchConnectivity.WCSession)
+  @objc dynamic public func session(_ session: WatchConnectivity.WCSession, activationDidCompleteWith activationState: WatchConnectivity.WCSessionActivationState, error: Swift.Error?)
+  @objc dynamic public func session(_ session: WatchConnectivity.WCSession, didReceiveUserInfo userInfo: [Swift.String : Any] = [:])
+  @objc dynamic public func session(_ session: WatchConnectivity.WCSession, didReceiveMessage message: [Swift.String : Any], replyHandler: @escaping ([Swift.String : Any]) -> Swift.Void)
 }
 public struct RMCenterMultimedia : Swift.Decodable {
   public let uuid: Swift.String?
@@ -970,6 +1022,9 @@ public class RMApi {
   @objc deinit
   public func encode(to encoder: Swift.Encoder) throws
 }
+extension RookMotionSDK.TypeMessage : Swift.Equatable {}
+extension RookMotionSDK.TypeMessage : Swift.Hashable {}
+extension RookMotionSDK.TypeMessage : Swift.RawRepresentable {}
 extension RookMotionSDK.RMTrainingInfo.CodingKeys : Swift.Equatable {}
 extension RookMotionSDK.RMTrainingInfo.CodingKeys : Swift.Hashable {}
 extension RookMotionSDK.RMTrainingInfo.CodingKeys : Swift.RawRepresentable {}

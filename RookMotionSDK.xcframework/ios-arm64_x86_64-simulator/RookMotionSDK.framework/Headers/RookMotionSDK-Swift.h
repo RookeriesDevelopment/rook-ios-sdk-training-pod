@@ -196,6 +196,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 @import ObjectiveC;
 @import Realm;
 @import UIKit;
+@import WatchConnectivity;
 #endif
 
 #pragma clang diagnostic ignored "-Wproperty-attribute-mismatch"
@@ -212,6 +213,16 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 # pragma clang attribute push(__attribute__((external_source_symbol(language="Swift", defined_in="RookMotionSDK",generated_declaration))), apply_to=any(function,enum,objc_interface,objc_category,objc_protocol))
 # pragma pop_macro("any")
 #endif
+
+@class WCSession;
+
+SWIFT_PROTOCOL("_TtP13RookMotionSDK21CommunicationDelegate_")
+@protocol CommunicationDelegate
+- (void)session:(WCSession * _Nonnull)session messageData:(NSDictionary<NSString *, id> * _Nonnull)messageData;
+- (void)session:(WCSession * _Nonnull)session userInfo:(NSDictionary<NSString *, id> * _Nonnull)userInfo;
+@optional
+- (void)session:(WCSession * _Nonnull)session message:(NSDictionary<NSString *, id> * _Nonnull)message;
+@end
 
 
 SWIFT_CLASS("_TtC13RookMotionSDK11OptionalInt")
@@ -259,6 +270,21 @@ SWIFT_CLASS("_TtC13RookMotionSDK17RMAuxiliarSummary")
 @property (nonatomic) NSInteger cadenceAccumulated;
 + (NSString * _Nullable)primaryKey SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC13RookMotionSDK22RMCommunicationManager")
+@interface RMCommunicationManager : NSObject
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+@interface RMCommunicationManager (SWIFT_EXTENSION(RookMotionSDK)) <WCSessionDelegate>
+- (void)sessionDidBecomeInactive:(WCSession * _Nonnull)session;
+- (void)sessionDidDeactivate:(WCSession * _Nonnull)session;
+- (void)session:(WCSession * _Nonnull)session activationDidCompleteWithState:(WCSessionActivationState)activationState error:(NSError * _Nullable)error;
+- (void)session:(WCSession * _Nonnull)session didReceiveUserInfo:(NSDictionary<NSString *, id> * _Nonnull)userInfo;
+- (void)session:(WCSession * _Nonnull)session didReceiveMessage:(NSDictionary<NSString *, id> * _Nonnull)message replyHandler:(void (^ _Nonnull)(NSDictionary<NSString *, id> * _Nonnull))replyHandler;
 @end
 
 
@@ -802,6 +828,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 @import ObjectiveC;
 @import Realm;
 @import UIKit;
+@import WatchConnectivity;
 #endif
 
 #pragma clang diagnostic ignored "-Wproperty-attribute-mismatch"
@@ -818,6 +845,16 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 # pragma clang attribute push(__attribute__((external_source_symbol(language="Swift", defined_in="RookMotionSDK",generated_declaration))), apply_to=any(function,enum,objc_interface,objc_category,objc_protocol))
 # pragma pop_macro("any")
 #endif
+
+@class WCSession;
+
+SWIFT_PROTOCOL("_TtP13RookMotionSDK21CommunicationDelegate_")
+@protocol CommunicationDelegate
+- (void)session:(WCSession * _Nonnull)session messageData:(NSDictionary<NSString *, id> * _Nonnull)messageData;
+- (void)session:(WCSession * _Nonnull)session userInfo:(NSDictionary<NSString *, id> * _Nonnull)userInfo;
+@optional
+- (void)session:(WCSession * _Nonnull)session message:(NSDictionary<NSString *, id> * _Nonnull)message;
+@end
 
 
 SWIFT_CLASS("_TtC13RookMotionSDK11OptionalInt")
@@ -865,6 +902,21 @@ SWIFT_CLASS("_TtC13RookMotionSDK17RMAuxiliarSummary")
 @property (nonatomic) NSInteger cadenceAccumulated;
 + (NSString * _Nullable)primaryKey SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC13RookMotionSDK22RMCommunicationManager")
+@interface RMCommunicationManager : NSObject
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+@interface RMCommunicationManager (SWIFT_EXTENSION(RookMotionSDK)) <WCSessionDelegate>
+- (void)sessionDidBecomeInactive:(WCSession * _Nonnull)session;
+- (void)sessionDidDeactivate:(WCSession * _Nonnull)session;
+- (void)session:(WCSession * _Nonnull)session activationDidCompleteWithState:(WCSessionActivationState)activationState error:(NSError * _Nullable)error;
+- (void)session:(WCSession * _Nonnull)session didReceiveUserInfo:(NSDictionary<NSString *, id> * _Nonnull)userInfo;
+- (void)session:(WCSession * _Nonnull)session didReceiveMessage:(NSDictionary<NSString *, id> * _Nonnull)message replyHandler:(void (^ _Nonnull)(NSDictionary<NSString *, id> * _Nonnull))replyHandler;
 @end
 
 
