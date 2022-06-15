@@ -271,6 +271,25 @@ SWIFT_CLASS("_TtC13RookMotionSDK17RMAuxiliarSummary")
 @end
 
 
+SWIFT_CLASS_NAMED("RMBasalCalculator")
+@interface RMBasalCalculator : NSObject
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+
+
+
+SWIFT_CLASS("_TtC13RookMotionSDK20RMBicycleDataRecords")
+@interface RMBicycleDataRecords : RealmSwiftObject
+@property (nonatomic, copy) NSString * _Nonnull timestamp;
+@property (nonatomic) NSInteger cadence;
+@property (nonatomic) float power;
+@property (nonatomic) float resistance;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
 SWIFT_CLASS("_TtC13RookMotionSDK22RMCommunicationManager")
 @interface RMCommunicationManager : NSObject
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
