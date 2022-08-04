@@ -50,9 +50,10 @@ extension Convertable {
   @objc dynamic public var records: RookMotionSDK.RMTrainingStoragedRecords?
   @objc dynamic public var remoteClass: RookMotionSDK.RMRemoteClass?
   public var summaries: RealmSwift.List<RookMotionSDK.RMTrainingSummary>
+  @objc dynamic public var offset: Swift.String?
   @objc override public static func primaryKey() -> Swift.String?
   public enum CodingKeys : Swift.String, Swift.CodingKey {
-    case start, end
+    case start, end, offset
     case sensorUUID
     case trainingTypeUUID
     case deviceType
@@ -541,6 +542,61 @@ public protocol RMTrainingCallback {
   @objc override dynamic public init()
   @objc deinit
 }
+public struct RMElasticLog : Swift.Codable {
+  public var logLevel: Swift.String?
+  public var code: RookMotionSDK.ElasticCode?
+  public var device: RookMotionSDK.ElasticDevice?
+  public var event: RookMotionSDK.ElasticEvent?
+  public var sensor: RookMotionSDK.ElasticSensor?
+  public var training: RookMotionSDK.ElasticTraining?
+  public var user: RookMotionSDK.ElasticUser?
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct ElasticCode : Swift.Codable {
+  public var className: Swift.String?, methodName: Swift.String?
+  public init(className: Swift.String?, methodName: Swift.String?)
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+public struct ElasticDevice : Swift.Codable {
+  public var platform: Swift.String?, model: Swift.String?, osVersion: Swift.String?, appVersion: Swift.String?
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+public struct ElasticEvent : Swift.Codable {
+  public var datetime: Swift.String?, name: Swift.String?
+  public var apiResponseCode: Swift.Int?
+  public var apiMessage: Swift.String?
+  public init(datetime: Swift.String?, name: Swift.String?, apiResponseCode: Swift.Int?, apiMessage: Swift.String?)
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+public struct ElasticSensor : Swift.Codable {
+  public var uuid: Swift.String?
+  public var name: Swift.String?
+  public init(uuid: Swift.String?, name: Swift.String?)
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+public struct ElasticUser : Swift.Codable {
+  public var uuid: Swift.String?
+  public init(uuid: Swift.String?)
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+public struct ElasticTraining : Swift.Codable {
+  public var start: Swift.String?
+  public var end: Swift.String?
+  public var deviceType: Swift.String?
+  public var roomUUID: Swift.String?
+  public var hrRecordsCount: Swift.Int?
+  public var stepsRecordsCount: Swift.Int?
+  public var summariesCount: Swift.Int?
+  public init(start: Swift.String?, end: Swift.String?, deviceType: Swift.String?, roomUUID: Swift.String?, hrRecordsCount: Swift.Int?, stepsRecordsCount: Swift.Int?, summariesCount: Swift.Int?)
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
 public struct RMRegisteredRooms : Swift.Decodable {
   public let roomUuid: Swift.String
   public let roomName: Swift.String
@@ -903,7 +959,7 @@ public class RMClass {
   public func getUserSensors(completion: @escaping (RookMotionSDK.RMResponse, [RookMotionSDK.RMSensorAPI]?) -> Swift.Void)
   public func getTrainingTypes(completion: @escaping (RookMotionSDK.RMResponse, [RookMotionSDK.RMTrainingType]?) -> Swift.Void)
   public func configureUserMetrics(completion: @escaping (RookMotionSDK.RMResponse) -> Swift.Void)
-  public func addSensor(sensor: RookMotionSDK.RMSensorAPI, completion: @escaping (RookMotionSDK.RMResponse) -> Swift.Void)
+  public func addSensor(sensor: RookMotionSDK.RMSensorAPI, completion: @escaping (RookMotionSDK.RMResponse, Swift.String?) -> Swift.Void)
   public func getSensorUUID(sensorName: Swift.String, completion: @escaping (Swift.String) -> Swift.Void)
   public func updateUserProfile(user: RookMotionSDK.RMUser, completion: @escaping (RookMotionSDK.RMResponse) -> Swift.Void)
   public func uploadPendingSensors(completion: @escaping (RookMotionSDK.RMResponse) -> Swift.Void)
@@ -993,6 +1049,9 @@ public enum eventElastic : Swift.String {
   case realtimeZeroHR
   case sensorUploaded
   case sensorRejected
+  case profileSensorLinked
+  case profileSensorDeleted
+  case remoteError
   public typealias RawValue = Swift.String
   public init?(rawValue: Swift.String)
   public var rawValue: Swift.String {
@@ -1006,6 +1065,9 @@ public enum eventElastic : Swift.String {
   public func sendLogoutEvent(logLevel: RookMotionSDK.LogLevel, userUUID: Swift.String, eventName: RookMotionSDK.eventElastic, statusCode: Swift.Int, messageResponse: Swift.String)
   public func sendRealtimeDataRejected(userUUID: Swift.String, training: RookMotionSDK.RMTrainingInfo, messageError: Swift.String)
   public func logZeroHeartRate(logLevel: RookMotionSDK.LogLevel, userUUID: Swift.String, classUUID: Swift.String)
+  public func logSensorProfile(userUUID: Swift.String, sensorUUID: Swift.String, sensorName: Swift.String, event: RookMotionSDK.eventElastic)
+  public func sendGenericLog(logLevel: RookMotionSDK.LogLevel, logCode: RookMotionSDK.ElasticCode?, logEvent: RookMotionSDK.ElasticEvent, logSensor: RookMotionSDK.ElasticSensor?, logTraining: RookMotionSDK.ElasticTraining?, userUUID: Swift.String)
+  public func getDateString() -> Swift.String
   @objc deinit
 }
 public class RMLoggerRequestManager {

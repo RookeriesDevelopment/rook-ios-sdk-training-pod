@@ -449,6 +449,7 @@ SWIFT_CLASS("_TtC13RookMotionSDK14RMTrainingInfo")
 @property (nonatomic, strong) RMTrainingSummaries * _Nullable summary;
 @property (nonatomic, strong) RMTrainingStoragedRecords * _Nullable records;
 @property (nonatomic, strong) RMRemoteClass * _Nullable remoteClass;
+@property (nonatomic, copy) NSString * _Nullable offset;
 + (NSString * _Nullable)primaryKey SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end

@@ -10,7 +10,7 @@
 		</data>
 		<key>Headers/RookMotionSDK-Swift.h</key>
 		<data>
-		Lk+0V+cBHd52G9SksG8+tXtVTCE=
+		qE3OZ8O8zXIJPtas8l8LCla2U8w=
 		</data>
 		<key>Headers/RookMotionSDK.h</key>
 		<data>
@@ -22,51 +22,51 @@
 		</data>
 		<key>Modules/RookMotionSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		2d3hiBWbOjz1DMRH2Or6EsYXE+o=
+		VZhVVTFFcmjhK02ppXqqjLyfUIo=
 		</data>
 		<key>Modules/RookMotionSDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		8WdKoRKOjut31tWGK7UC3xo/6Po=
+		9/a+D2LuSkfzpaWTj116rJmhocI=
 		</data>
 		<key>Modules/RookMotionSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		GHwO/8zZVhHABEJtaThDEJqavMU=
+		5CUOn8OVTuc2IZbImGIq0qBgxak=
 		</data>
 		<key>Modules/RookMotionSDK.swiftmodule/arm64.swiftdoc</key>
 		<data>
-		2d3hiBWbOjz1DMRH2Or6EsYXE+o=
+		VZhVVTFFcmjhK02ppXqqjLyfUIo=
 		</data>
 		<key>Modules/RookMotionSDK.swiftmodule/arm64.swiftinterface</key>
 		<data>
-		8WdKoRKOjut31tWGK7UC3xo/6Po=
+		9/a+D2LuSkfzpaWTj116rJmhocI=
 		</data>
 		<key>Modules/RookMotionSDK.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		GHwO/8zZVhHABEJtaThDEJqavMU=
+		5CUOn8OVTuc2IZbImGIq0qBgxak=
 		</data>
 		<key>Modules/RookMotionSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		XQGI0U9baA5U/HT42VUZDefAJF8=
+		35X5c7Zk5JR7n42UbcTEQw+VsGc=
 		</data>
 		<key>Modules/RookMotionSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		jYcCyweiOeKzIO0MBiBsNWUM+Uo=
+		t3/Gyryx+23ibsZh26RxNsXHjCk=
 		</data>
 		<key>Modules/RookMotionSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		Slc6l33AxBVBzQQU50OHmRBUOQ4=
+		dlijyOzGvCEzFTxa0Ov9snvDu+U=
 		</data>
 		<key>Modules/RookMotionSDK.swiftmodule/x86_64.swiftdoc</key>
 		<data>
-		XQGI0U9baA5U/HT42VUZDefAJF8=
+		35X5c7Zk5JR7n42UbcTEQw+VsGc=
 		</data>
 		<key>Modules/RookMotionSDK.swiftmodule/x86_64.swiftinterface</key>
 		<data>
-		jYcCyweiOeKzIO0MBiBsNWUM+Uo=
+		t3/Gyryx+23ibsZh26RxNsXHjCk=
 		</data>
 		<key>Modules/RookMotionSDK.swiftmodule/x86_64.swiftmodule</key>
 		<data>
-		Slc6l33AxBVBzQQU50OHmRBUOQ4=
+		dlijyOzGvCEzFTxa0Ov9snvDu+U=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -86,7 +86,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			aB2B0aY/Z+04GtpbbKlZOwREx0zyez3hEFeEZOVQa7A=
+			BqywFKWf6gc1cS5O0m5bWpt7lR+c0xeQ1nrBONHHPDw=
 			</data>
 		</dict>
 		<key>Headers/RookMotionSDK.h</key>
@@ -100,84 +100,84 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			RVUUN+gJx39wTLAPiO6mALgxhVSwq6dQP0uU9DRPftg=
+			vrsQ/sT1FzURuNDpkS/f+/MGT8huoaiqnWezh6IdgeI=
 			</data>
 		</dict>
 		<key>Modules/RookMotionSDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			PzMEIAL177ZqAvYJr7BPCjLYUutTjXraI+dveaOT7fQ=
+			d5Q+wwdAuLrtm62LIYhrPa6+/NPeHzXR3TODSUS7Jts=
 			</data>
 		</dict>
 		<key>Modules/RookMotionSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			N9BWJtbAy/twFIieWU0dNN+O3okVKnBSQtudp5gJM/4=
+			Y5krC1+jkhsKJwtw61AqTxn8zNtjddCPIvkiOUevA90=
 			</data>
 		</dict>
 		<key>Modules/RookMotionSDK.swiftmodule/arm64.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			RVUUN+gJx39wTLAPiO6mALgxhVSwq6dQP0uU9DRPftg=
+			vrsQ/sT1FzURuNDpkS/f+/MGT8huoaiqnWezh6IdgeI=
 			</data>
 		</dict>
 		<key>Modules/RookMotionSDK.swiftmodule/arm64.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			PzMEIAL177ZqAvYJr7BPCjLYUutTjXraI+dveaOT7fQ=
+			d5Q+wwdAuLrtm62LIYhrPa6+/NPeHzXR3TODSUS7Jts=
 			</data>
 		</dict>
 		<key>Modules/RookMotionSDK.swiftmodule/arm64.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			N9BWJtbAy/twFIieWU0dNN+O3okVKnBSQtudp5gJM/4=
+			Y5krC1+jkhsKJwtw61AqTxn8zNtjddCPIvkiOUevA90=
 			</data>
 		</dict>
 		<key>Modules/RookMotionSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			4qkbbIIjwdDj1mdAtomjIhe03fIG3KgMz8vTWlgd1pE=
+			A4uMGKpBF0KwjYIKFYhA1QZfAbJm69nJGlZ2G4TYZrM=
 			</data>
 		</dict>
 		<key>Modules/RookMotionSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			zwR7hdU4r3NQgOuAm6TzLJvEAe/6bh5w4ANXzwuDN8g=
+			/10Ogdh+2wB8fGjRVOzzYk3iATzTXxUL/hb24FGeoUI=
 			</data>
 		</dict>
 		<key>Modules/RookMotionSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			/G6mPr+XzBT5430vzZkuWqgoRr9OIhKtZ8bNkW12eqg=
+			SLZt2Zxcxz9e2tDNNmsIK4wczwS0vsklyW/MJcwwhYA=
 			</data>
 		</dict>
 		<key>Modules/RookMotionSDK.swiftmodule/x86_64.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			4qkbbIIjwdDj1mdAtomjIhe03fIG3KgMz8vTWlgd1pE=
+			A4uMGKpBF0KwjYIKFYhA1QZfAbJm69nJGlZ2G4TYZrM=
 			</data>
 		</dict>
 		<key>Modules/RookMotionSDK.swiftmodule/x86_64.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			zwR7hdU4r3NQgOuAm6TzLJvEAe/6bh5w4ANXzwuDN8g=
+			/10Ogdh+2wB8fGjRVOzzYk3iATzTXxUL/hb24FGeoUI=
 			</data>
 		</dict>
 		<key>Modules/RookMotionSDK.swiftmodule/x86_64.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			/G6mPr+XzBT5430vzZkuWqgoRr9OIhKtZ8bNkW12eqg=
+			SLZt2Zxcxz9e2tDNNmsIK4wczwS0vsklyW/MJcwwhYA=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
