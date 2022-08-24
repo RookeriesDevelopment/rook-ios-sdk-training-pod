@@ -188,9 +188,6 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #if __has_warning("-Watimport-in-framework-header")
 #pragma clang diagnostic ignored "-Watimport-in-framework-header"
 #endif
-@import AAInfographics;
-@import CoreGraphics;
-@import Foundation;
 @import ObjectiveC;
 @import Realm;
 @import UIKit;
@@ -226,33 +223,6 @@ SWIFT_PROTOCOL("_TtP13RookMotionSDK21CommunicationDelegate_")
 SWIFT_CLASS("_TtC13RookMotionSDK11OptionalInt")
 @interface OptionalInt : RealmSwiftObject
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-@end
-
-@class NSBundle;
-@class NSCoder;
-
-SWIFT_CLASS("_TtC13RookMotionSDK17RMTrainingManager")
-@interface RMTrainingManager : UIViewController
-- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
-@end
-
-
-SWIFT_CLASS("_TtC13RookMotionSDK19RMAutomaticTraining")
-@interface RMAutomaticTraining : RMTrainingManager
-- (void)setSummaryViewAndElements;
-- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
-@end
-
-@class UITableView;
-@class UITableViewCell;
-
-@interface RMAutomaticTraining (SWIFT_EXTENSION(RookMotionSDK)) <UITableViewDataSource, UITableViewDelegate>
-- (CGFloat)tableView:(UITableView * _Nonnull)tableView heightForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
-- (void)tableView:(UITableView * _Nonnull)tableView didSelectRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
-- (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
-- (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
 @end
 
 
@@ -454,10 +424,18 @@ SWIFT_CLASS("_TtC13RookMotionSDK14RMTrainingInfo")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class NSBundle;
+@class NSCoder;
+
+SWIFT_CLASS("_TtC13RookMotionSDK17RMTrainingManager")
+@interface RMTrainingManager : UIViewController
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+@end
 
 
 
-@interface RMTrainingManager (SWIFT_EXTENSION(RookMotionSDK)) <AAChartViewDelegate>
+@interface RMTrainingManager (SWIFT_EXTENSION(RookMotionSDK))
 - (void)setSummaryViewAndElements;
 @end
 

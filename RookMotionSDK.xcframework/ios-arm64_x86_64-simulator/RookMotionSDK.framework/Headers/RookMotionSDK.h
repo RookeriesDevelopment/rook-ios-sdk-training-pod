@@ -2,7 +2,7 @@
 //  RookMotionSDK.h
 //  RookMotionSDK
 //
-//  Created by Francisco Rook on 14/04/21.
+//  Created by Francisco Guerrero Escamilla on 24/08/22.
 //
 
 #import <Foundation/Foundation.h>
