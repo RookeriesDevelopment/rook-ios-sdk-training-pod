@@ -50,8 +50,7 @@ Pod::Spec.new do |spec|
 
   # spec.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   spec.dependency 'SwiftyJSON', '5.0.1'
-  spec.dependency 'Alamofire', '5.4.2'
+  spec.dependency 'Alamofire', '5.6.2'
   spec.dependency 'RealmSwift', '10.5.0'
-  spec.dependency 'AAInfographics', '6.0.0'
 
 end
