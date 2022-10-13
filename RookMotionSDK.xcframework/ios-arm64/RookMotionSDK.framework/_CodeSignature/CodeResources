@@ -4,121 +4,99 @@
 <dict>
 	<key>files</key>
 	<dict>
-		<key>.gitignore</key>
-		<data>
-		DXwGdUz7nhLkAc1T7tw0pU1akGM=
-		</data>
 		<key>Headers/RookMotionSDK-Swift.h</key>
 		<data>
-		Pi1CFprhCSx4qvhnbgwRjR30f0s=
+		JhdvYVeJpa7v0SNDL1tOjxX+85g=
 		</data>
 		<key>Headers/RookMotionSDK.h</key>
 		<data>
-		PstqKMKk22U0clDh//HbzQgOfW0=
+		1mKqTnpaamo8NmFyikzpamoB9ic=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		6NQMPPcEz0eyuNrBYFEBSndHTTg=
+		m6wjLwQSQzWV2/JLntEXql1DzYU=
+		</data>
+		<key>Modules/RookMotionSDK.swiftmodule/arm64-apple-ios.abi.json</key>
+		<data>
+		SFDX/x8khl/Lm5kDYDuCVaPYDb8=
+		</data>
+		<key>Modules/RookMotionSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
+		<data>
+		Qb7vDQNI8M7dCjpRgSreAr5PnqY=
 		</data>
 		<key>Modules/RookMotionSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		+vUmXDLNx0+eUHAceQYhxCBcgLw=
+		Hm1/qsNuZ3aDQs/9lPA6I2NWVwE=
 		</data>
 		<key>Modules/RookMotionSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		7cDELusu5XIPU1JtFTuJl9KSBNM=
+		Qb7vDQNI8M7dCjpRgSreAr5PnqY=
 		</data>
 		<key>Modules/RookMotionSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		xnb9RszvU1Nx9fDeQrXMdiqtp1w=
-		</data>
-		<key>Modules/RookMotionSDK.swiftmodule/arm64.swiftdoc</key>
-		<data>
-		+vUmXDLNx0+eUHAceQYhxCBcgLw=
-		</data>
-		<key>Modules/RookMotionSDK.swiftmodule/arm64.swiftinterface</key>
-		<data>
-		7cDELusu5XIPU1JtFTuJl9KSBNM=
-		</data>
-		<key>Modules/RookMotionSDK.swiftmodule/arm64.swiftmodule</key>
-		<data>
-		xnb9RszvU1Nx9fDeQrXMdiqtp1w=
+		DOdev28/mrMtavftaNC+osvdkVI=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
-		eHY2WCrI3jBMBFzzqK6YJdUoEQE=
+		cRcuEdalDCOir5BuzCFaEDK9uSI=
 		</data>
 	</dict>
 	<key>files2</key>
 	<dict>
-		<key>.gitignore</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			DUZEKTY02+AxAzWRBbCznf2RnTIHQP6SkSM/gmPYpbA=
-			</data>
-		</dict>
 		<key>Headers/RookMotionSDK-Swift.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			b3THt/nPXLOCekPbsqWLjkYTwAz1fld9DidfkBq9tJE=
+			HtcFa1FZFr85B30M43SlEqWMGmVm2Hbt9xI76rDuzf0=
 			</data>
 		</dict>
 		<key>Headers/RookMotionSDK.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Yr8G0bqHu4IgU8yWQdnvLlpb7tKDSt6vmjWXcMin6uQ=
+			Wv8IUWQUQ0ulWx1ztH0FZjzGnPZ9TOwuK7XB0rydfsU=
+			</data>
+		</dict>
+		<key>Modules/RookMotionSDK.swiftmodule/arm64-apple-ios.abi.json</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			GGsDgK0+uYmpCgSE4OqhhrPOEFYsZh9EpAWzR2A8NKs=
+			</data>
+		</dict>
+		<key>Modules/RookMotionSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			y7aEEMiOjbEWKlT9zSP/ThUabzHElKColgzy60zFkfo=
 			</data>
 		</dict>
 		<key>Modules/RookMotionSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ETX0nMz0yBpmmZwyyHVKK0vxg1j9GMYofrnYe0pUeH0=
+			dceQk5pZRzcbC8Vko/v340WpFWQYQXzOGxie/Luh0e8=
 			</data>
 		</dict>
 		<key>Modules/RookMotionSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			B0vT4iyYrHPp2OblbDOGZUHn75MV76g2GdGC2lNUUOk=
+			y7aEEMiOjbEWKlT9zSP/ThUabzHElKColgzy60zFkfo=
 			</data>
 		</dict>
 		<key>Modules/RookMotionSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			0iiWZ/dE/rU9JiPX3Y08856XcPm+RPJa4QTgbS5AYCg=
-			</data>
-		</dict>
-		<key>Modules/RookMotionSDK.swiftmodule/arm64.swiftdoc</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			ETX0nMz0yBpmmZwyyHVKK0vxg1j9GMYofrnYe0pUeH0=
-			</data>
-		</dict>
-		<key>Modules/RookMotionSDK.swiftmodule/arm64.swiftinterface</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			B0vT4iyYrHPp2OblbDOGZUHn75MV76g2GdGC2lNUUOk=
-			</data>
-		</dict>
-		<key>Modules/RookMotionSDK.swiftmodule/arm64.swiftmodule</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			0iiWZ/dE/rU9JiPX3Y08856XcPm+RPJa4QTgbS5AYCg=
+			qx75VeOlfPxNI+EKgwzHxon1p6a9KkD8mQhJ78hbrxk=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			BO+sMjIS4zF41gXtLmxE7jFecB2ZvXWp5c6Bjta5dXg=
+			c8c208jkab/GuNE2C2kwfTa4aJGNEkC6DvNMblJZQvE=
 			</data>
 		</dict>
 	</dict>
