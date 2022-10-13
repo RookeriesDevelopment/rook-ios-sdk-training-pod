@@ -16,6 +16,7 @@ import WatchConnectivity
 import _Concurrency
 import _StringProcessing
 @objc @_inheritsConvenienceInitializers public class RMTrainingInfo : RealmSwift.Object, Swift.Codable {
+  @objc dynamic public var _id: RealmSwift.ObjectId
   @objc dynamic public var start: Swift.String?
   @objc dynamic public var end: Swift.String?
   @objc dynamic public var trainingTypeUUID: Swift.String?
@@ -68,6 +69,7 @@ public enum TypeMessage : Swift.String {
   case refreshToken
   case logout
   case training
+  case unfinishTraining
   public init?(rawValue: Swift.String)
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
@@ -226,6 +228,24 @@ public struct RMResponse {
   public var code: Swift.String
   public var message: Swift.String
   public var success: Swift.Bool
+}
+public struct RMTrainingTransfer : Swift.Codable {
+  public let start: Swift.String
+  public let end: Swift.String
+  public let trainingTypeUUID: Swift.String
+  public let sensorUUID: Swift.String?
+  public let sensorName: Swift.String
+  public let deviceType: Swift.String
+  public let uploadedAt: Swift.String
+  public let groupalMode: Swift.Int
+  public let offset: Swift.String
+  public let auxSummary: RookMotionSDK.RMAuxSummaryTransfer
+  public let summary: RookMotionSDK.RMTrainingSummariesTransfer
+  public let records: RookMotionSDK.RMTrainingStoragedRecordsTransfer
+  public let remoteClass: RookMotionSDK.RMRemoteClassTransfer?
+  public init(start: Swift.String, end: Swift.String, trainingTypeUUID: Swift.String, sensorUUID: Swift.String?, sensorName: Swift.String, deviceType: Swift.String, uploadedAt: Swift.String, groupalMode: Swift.Int, offset: Swift.String, auxSummary: RookMotionSDK.RMAuxSummaryTransfer, summary: RookMotionSDK.RMTrainingSummariesTransfer, records: RookMotionSDK.RMTrainingStoragedRecordsTransfer, remoteClass: RookMotionSDK.RMRemoteClassTransfer?)
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
 }
 public struct RemoteClasInfo : Swift.Decodable {
   public let roomUUID: Swift.String?
@@ -493,7 +513,7 @@ public enum RMBasalCalculationResult {
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers public class RMTrainingSummaries : RealmSwift.Object {
-  @objc dynamic public var id: Swift.Int
+  @objc dynamic public var id: RealmSwift.ObjectId
   @objc dynamic public var duration_time_tot: Swift.Int
   @objc dynamic public var z1_time: Swift.Float
   @objc dynamic public var z2_time: Swift.Float
@@ -686,7 +706,7 @@ public struct RMRegisteredCenter : Swift.Decodable {
   public init(from decoder: Swift.Decoder) throws
 }
 @objc @_inheritsConvenienceInitializers public class RMAuxiliarSummary : RealmSwift.Object {
-  @objc dynamic public var id: Swift.Int
+  @objc dynamic public var id: RealmSwift.ObjectId
   @objc dynamic public var hrElements: Swift.Int
   @objc dynamic public var hrAccumulated: Swift.Int
   @objc dynamic public var effortElements: Swift.Int
@@ -789,6 +809,17 @@ public struct RMRegisteredRooms : Swift.Decodable {
   @objc deinit
   public func encode(to encoder: Swift.Encoder) throws
   required public init(from decoder: Swift.Decoder) throws
+}
+public struct RMRemoteClassTransfer : Swift.Codable {
+  public let classUUID: Swift.String
+  public let roomUUID: Swift.String
+  public let trainingName: Swift.String
+  public let classDelay: Swift.Int
+  public let useSteps: Swift.Int
+  public let stepOptions: Swift.String
+  public init(classUUID: Swift.String, roomUUID: Swift.String, trainingName: Swift.String, classDelay: Swift.Int, useSteps: Swift.Int, stepOptions: Swift.String)
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
 }
 public struct RMTrainingAuxiliarSummary {
   public var hrElements: Swift.Int
@@ -897,6 +928,31 @@ public struct RMCenterContact : Swift.Decodable {
   public let email: Swift.String?
   public let phone: Swift.String?
   public init(uuid: Swift.String?, contactArea: Swift.String?, contactPersonName: Swift.String?, email: Swift.String?, phone: Swift.String?)
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct RMTrainingStoragedRecordsTransfer : Swift.Codable {
+  public init(hrRecords: [RookMotionSDK.RMHeartRateDataRecordsTrasnfer], stepRecords: [RookMotionSDK.RMStepDataRecordsTransfer])
+  public init()
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct RMHeartRateDataRecordsTrasnfer : Swift.Codable {
+  public let timestamp: Swift.String
+  public let heartRate: Swift.Int
+  public let calories: Swift.Float
+  public let effort: Swift.Float
+  public let start: Swift.String
+  public let heart_rate_variability: Swift.Float
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct RMStepDataRecordsTransfer : Swift.Codable {
+  public let timestamp: Swift.String
+  public let cadence: Swift.Float
+  public let steps: Swift.Int
+  public let start: Swift.String
+  public init(timestamp: Swift.String, cadence: Swift.Float, steps: Swift.Int, start: Swift.String)
+  public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }
 public protocol RMSensorConnectionCallback : AnyObject {
@@ -1066,6 +1122,55 @@ extension RookMotionSDK.RMSensorManager : CoreBluetooth.CBPeripheralDelegate {
   @objc deinit
   required public init(from decoder: Swift.Decoder) throws
 }
+public struct RMTrainingSummariesTransfer : Swift.Codable {
+  public let duration_time_tot: Swift.Int
+  public let z1_time: Swift.Float
+  public let z2_time: Swift.Float
+  public let z3_time: Swift.Float
+  public let z4_time: Swift.Float
+  public let z5_time: Swift.Float
+  public let hr_max: Swift.Int
+  public let hr_min: Swift.Int
+  public let hr_avg: Swift.Int
+  public let effort_max: Swift.Int
+  public let effort_min: Swift.Int
+  public let effort_avg: Swift.Int
+  public let calories: Swift.Int
+  public let z1_calories_tot: Swift.Float
+  public let z2_calories_tot: Swift.Float
+  public let z3_calories_tot: Swift.Float
+  public let z4_calories_tot: Swift.Float
+  public let z5_calories_tot: Swift.Float
+  public let steptsTotal: Swift.Int
+  public let z1_steps_tot: Swift.Int
+  public let z2_steps_tot: Swift.Int
+  public let z3_steps_tot: Swift.Int
+  public let z4_steps_tot: Swift.Int
+  public let z5_steps_tot: Swift.Int
+  public let cadence_max: Swift.Float
+  public let cadence_min: Swift.Float
+  public let cadence_avg: Swift.Float
+  public let z1_cadence_tot: Swift.Int
+  public let z2_cadence_tot: Swift.Int
+  public let z3_cadence_tot: Swift.Int
+  public let z4_cadence_tot: Swift.Int
+  public let z5_cadence_tot: Swift.Int
+  public init(duration_time_tot: Swift.Int, z1_time: Swift.Float, z2_time: Swift.Float, z3_time: Swift.Float, z4_time: Swift.Float, z5_time: Swift.Float, hr_max: Swift.Int, hr_min: Swift.Int, hr_avg: Swift.Int, effort_max: Swift.Int, effort_min: Swift.Int, effort_avg: Swift.Int, calories: Swift.Int, z1_calories_tot: Swift.Float, z2_calories_tot: Swift.Float, z3_calories_tot: Swift.Float, z4_calories_tot: Swift.Float, z5_calories_tot: Swift.Float, steptsTotal: Swift.Int, z1_steps_tot: Swift.Int, z2_steps_tot: Swift.Int, z3_steps_tot: Swift.Int, z4_steps_tot: Swift.Int, z5_steps_tot: Swift.Int, cadence_max: Swift.Float, cadence_min: Swift.Float, cadence_avg: Swift.Float, z1_cadence_tot: Swift.Int, z2_cadence_tot: Swift.Int, z3_cadence_tot: Swift.Int, z4_cadence_tot: Swift.Int, z5_cadence_tot: Swift.Int)
+  public init()
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct RMAuxSummaryTransfer : Swift.Codable {
+  public let hrElements: Swift.Int
+  public let hrAccumulated: Swift.Int
+  public let effortElements: Swift.Int
+  public let effortAccumulated: Swift.Int
+  public let cadenceElements: Swift.Int
+  public let cadenceAccumulated: Swift.Int
+  public init(hrElements: Swift.Int, hrAccumulated: Swift.Int, effortElements: Swift.Int, effortAccumulated: Swift.Int, cadenceElements: Swift.Int, cadenceAccumulated: Swift.Int)
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
 @_hasMissingDesignatedInitializers public class RMHrRecordRetrived : Swift.Codable {
   public var heartRate: Swift.String?
   public var effort: Swift.String?
@@ -1167,7 +1272,7 @@ public enum eventElastic : Swift.String {
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers public class RMRemoteClass : RealmSwift.Object {
-  @objc dynamic public var id: Swift.Int
+  @objc dynamic public var id: RealmSwift.ObjectId
   @objc dynamic public var classUUID: Swift.String
   @objc dynamic public var roomUUID: Swift.String
   @objc dynamic public var trainingName: Swift.String

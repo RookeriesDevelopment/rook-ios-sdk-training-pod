@@ -272,11 +272,12 @@ SWIFT_CLASS("_TtC13RookMotionSDK11OptionalInt")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class RealmSwiftObjectId;
 
 /// RMAuxiliarSummary model helps to store the number of samples ant its value accumulated
 SWIFT_CLASS("_TtC13RookMotionSDK17RMAuxiliarSummary")
 @interface RMAuxiliarSummary : RealmSwiftObject
-@property (nonatomic) NSInteger id;
+@property (nonatomic, strong) RealmSwiftObjectId * _Nonnull id;
 @property (nonatomic) NSInteger hrElements;
 @property (nonatomic) NSInteger hrAccumulated;
 @property (nonatomic) NSInteger effortElements;
@@ -343,7 +344,7 @@ SWIFT_CLASS("_TtC13RookMotionSDK22RMHeartRateDataRecords")
 
 SWIFT_CLASS("_TtC13RookMotionSDK13RMRemoteClass")
 @interface RMRemoteClass : RealmSwiftObject
-@property (nonatomic) NSInteger id;
+@property (nonatomic, strong) RealmSwiftObjectId * _Nonnull id;
 @property (nonatomic, copy) NSString * _Nonnull classUUID;
 @property (nonatomic, copy) NSString * _Nonnull roomUUID;
 @property (nonatomic, copy) NSString * _Nonnull trainingName;
@@ -449,6 +450,7 @@ SWIFT_CLASS("_TtC13RookMotionSDK16RMStorageManager")
 /// </ul>
 SWIFT_CLASS("_TtC13RookMotionSDK14RMTrainingInfo")
 @interface RMTrainingInfo : RealmSwiftObject
+@property (nonatomic, strong) RealmSwiftObjectId * _Nonnull _id;
 /// Start time of the training “YYYY-MM-dd  HH:mm:ss”
 @property (nonatomic, copy) NSString * _Nullable start;
 /// End time of the training “YYYY-MM-dd  HH:mm:ss”
@@ -507,7 +509,7 @@ SWIFT_CLASS("_TtC13RookMotionSDK25RMTrainingStoragedRecords")
 /// STORAGE.class this struct contains the training summaries on realtime
 SWIFT_CLASS("_TtC13RookMotionSDK19RMTrainingSummaries")
 @interface RMTrainingSummaries : RealmSwiftObject
-@property (nonatomic) NSInteger id;
+@property (nonatomic, strong) RealmSwiftObjectId * _Nonnull id;
 @property (nonatomic) NSInteger duration_time_tot;
 @property (nonatomic) float z1_time;
 @property (nonatomic) float z2_time;

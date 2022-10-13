@@ -2,7 +2,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "RookMotionSDK"
-  spec.version      = "1.0.7"
+  spec.version      = "1.0.8"
   spec.summary      = "RookMotion iOS Lib"
 
   spec.description  = "RookMotion iOS sdk allows the implementation of the RookMotion functionalities required to add training measurement, tracking, and analysis to an iOS APP"
@@ -29,7 +29,7 @@ Pod::Spec.new do |spec|
   # spec.watchos.deployment_target = "2.0"
   # spec.tvos.deployment_target = "9.0"
 
-  spec.source       = { :git => "https://gitlab.com/rooklinkforclients/RookMotion-SDK-Cocoa.git", :tag => "1.0.7-wq" }
+  spec.source       = { :git => "https://gitlab.com/rooklinkforclients/RookMotion-SDK-Cocoa.git", :tag => "1.0.8-wq" }
 
   #spec.source_files  = "Classes", "Classes/**/*.{h,m}"
   #spec.exclude_files = "Classes/Exclude"

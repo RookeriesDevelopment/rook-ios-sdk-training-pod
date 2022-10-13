@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/RookMotionSDK-Swift.h</key>
 		<data>
-		JhdvYVeJpa7v0SNDL1tOjxX+85g=
+		0XUmKkmWLGD98eDE9xpI/5uy3mM=
 		</data>
 		<key>Headers/RookMotionSDK.h</key>
 		<data>
@@ -18,11 +18,11 @@
 		</data>
 		<key>Modules/RookMotionSDK.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		SFDX/x8khl/Lm5kDYDuCVaPYDb8=
+		xP0UDIS1zbSty0SAoPax0zYHIXo=
 		</data>
 		<key>Modules/RookMotionSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		Qb7vDQNI8M7dCjpRgSreAr5PnqY=
+		ZATf0t9qBEtJNXg+EV1B+8UG+lI=
 		</data>
 		<key>Modules/RookMotionSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
@@ -30,11 +30,11 @@
 		</data>
 		<key>Modules/RookMotionSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		Qb7vDQNI8M7dCjpRgSreAr5PnqY=
+		ZATf0t9qBEtJNXg+EV1B+8UG+lI=
 		</data>
 		<key>Modules/RookMotionSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		DOdev28/mrMtavftaNC+osvdkVI=
+		DtjTaVX/CLiUdBIGA5Qyp9joXoE=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -47,7 +47,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			HtcFa1FZFr85B30M43SlEqWMGmVm2Hbt9xI76rDuzf0=
+			ilcKpl2oZiNL9FpKC2gYcrumHqSTEqd2Tn8xpHpoPks=
 			</data>
 		</dict>
 		<key>Headers/RookMotionSDK.h</key>
@@ -61,14 +61,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			GGsDgK0+uYmpCgSE4OqhhrPOEFYsZh9EpAWzR2A8NKs=
+			BVdQbNBeD8jeuTvEUtMb+mrfOGsjXeQoYm7qKQTaW5c=
 			</data>
 		</dict>
 		<key>Modules/RookMotionSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			y7aEEMiOjbEWKlT9zSP/ThUabzHElKColgzy60zFkfo=
+			sXe0bQ1o0KIP8LN/hZle6rfpIov8YzKTvx7a+q4lR7g=
 			</data>
 		</dict>
 		<key>Modules/RookMotionSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
@@ -82,14 +82,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			y7aEEMiOjbEWKlT9zSP/ThUabzHElKColgzy60zFkfo=
+			sXe0bQ1o0KIP8LN/hZle6rfpIov8YzKTvx7a+q4lR7g=
 			</data>
 		</dict>
 		<key>Modules/RookMotionSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			qx75VeOlfPxNI+EKgwzHxon1p6a9KkD8mQhJ78hbrxk=
+			2PEONRpfnRrXA9ohHWJqctPYCehvsWIrf0W2sS+PUfk=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
