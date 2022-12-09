@@ -6,6 +6,6 @@ framework module RookMotionSDK {
 }
 
 module RookMotionSDK.Swift {
-    header "RookMotionSDK-Swift.h"
-    requires objc
+  header "RookMotionSDK-Swift.h"
+  requires objc
 }

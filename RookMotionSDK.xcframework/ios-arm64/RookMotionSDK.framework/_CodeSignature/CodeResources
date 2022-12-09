@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/RookMotionSDK-Swift.h</key>
 		<data>
-		nUdHEGb2gdAJOYYYxvf+2e33ilk=
+		4uELgFE3r9Eb+N/FpqVXwndJwB8=
 		</data>
 		<key>Headers/RookMotionSDK.h</key>
 		<data>
@@ -14,35 +14,39 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		n9QbH6vRlMZN6bDfDtfW8pU6q1M=
+		4KlSOK64ZFzjvqQtSkfC1zNssZs=
+		</data>
+		<key>Modules/RookMotionSDK.swiftmodule/arm64-apple-ios.abi.json</key>
+		<data>
+		XzwLaYQmEG1HLDEpVHoYMcGBVhM=
+		</data>
+		<key>Modules/RookMotionSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
+		<data>
+		79nhxyPcBj/ScO5l1vJP96tsVfA=
 		</data>
 		<key>Modules/RookMotionSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		fHbu56MQrCEs5SUHwJqCuU/Uyns=
+		v2dM+zAqewO1Eq5z6OTXgBrckQ8=
 		</data>
 		<key>Modules/RookMotionSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		+dIFs1LtMOMMQZX/SEWNP4LCsIY=
+		79nhxyPcBj/ScO5l1vJP96tsVfA=
 		</data>
 		<key>Modules/RookMotionSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		a8pWwRz+4ClToxTOdKv9RCXoMdI=
-		</data>
-		<key>Modules/RookMotionSDK.swiftmodule/arm64.swiftdoc</key>
-		<data>
-		fHbu56MQrCEs5SUHwJqCuU/Uyns=
-		</data>
-		<key>Modules/RookMotionSDK.swiftmodule/arm64.swiftinterface</key>
-		<data>
-		+dIFs1LtMOMMQZX/SEWNP4LCsIY=
-		</data>
-		<key>Modules/RookMotionSDK.swiftmodule/arm64.swiftmodule</key>
-		<data>
-		a8pWwRz+4ClToxTOdKv9RCXoMdI=
+		Pnch4jUJ28I2v2um/VTxC2GrMXg=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
-		eHY2WCrI3jBMBFzzqK6YJdUoEQE=
+		cRcuEdalDCOir5BuzCFaEDK9uSI=
+		</data>
+		<key>RookContainer.momd/RookContainer.mom</key>
+		<data>
+		cnv/4o+gIt6/jGehTQEismBjsnA=
+		</data>
+		<key>RookContainer.momd/VersionInfo.plist</key>
+		<data>
+		JU0bGGta3rDPgNLkSH/EXkoIgWA=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -51,7 +55,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			9zwCUETwpRuSAs8JLSmC036lYzAUCDnV+2md/1blgrY=
+			c2Bsmbh0o3AB4JkwlI0cnOaRyviGJGBjQWw/9UQ9lMg=
 			</data>
 		</dict>
 		<key>Headers/RookMotionSDK.h</key>
@@ -61,53 +65,60 @@
 			Wv8IUWQUQ0ulWx1ztH0FZjzGnPZ9TOwuK7XB0rydfsU=
 			</data>
 		</dict>
+		<key>Modules/RookMotionSDK.swiftmodule/arm64-apple-ios.abi.json</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			o/V9EjCGFcpVNcY+5o9Oh36tgqcR2JTxeBHmK20/pgY=
+			</data>
+		</dict>
+		<key>Modules/RookMotionSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			8l9sDVcuvwpCzIO5OyS5YgUmAdnBcnvVOnLxJTn1P4Q=
+			</data>
+		</dict>
 		<key>Modules/RookMotionSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			r7SB3YL3uoIvR0EdpR8aXcT5BFTYwcPCN1x5XSkR9Js=
+			39csyvphloZ7UU90cAy1W4McCclTArGynWzTzVGxJ9c=
 			</data>
 		</dict>
 		<key>Modules/RookMotionSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			MRoW8f8ZSxyRa6GGBUfIBEwMqJy1wJzJ16inIudk/oI=
+			8l9sDVcuvwpCzIO5OyS5YgUmAdnBcnvVOnLxJTn1P4Q=
 			</data>
 		</dict>
 		<key>Modules/RookMotionSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			E/01QeaDAsrlfnmzDyd0jrGyW63KdUBBv9dCeMKYL44=
-			</data>
-		</dict>
-		<key>Modules/RookMotionSDK.swiftmodule/arm64.swiftdoc</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			r7SB3YL3uoIvR0EdpR8aXcT5BFTYwcPCN1x5XSkR9Js=
-			</data>
-		</dict>
-		<key>Modules/RookMotionSDK.swiftmodule/arm64.swiftinterface</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			MRoW8f8ZSxyRa6GGBUfIBEwMqJy1wJzJ16inIudk/oI=
-			</data>
-		</dict>
-		<key>Modules/RookMotionSDK.swiftmodule/arm64.swiftmodule</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			E/01QeaDAsrlfnmzDyd0jrGyW63KdUBBv9dCeMKYL44=
+			e7WYBh76l2+uYjzCm5vlIWAAUWsLly4WeZHp3gy0rzw=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			BO+sMjIS4zF41gXtLmxE7jFecB2ZvXWp5c6Bjta5dXg=
+			c8c208jkab/GuNE2C2kwfTa4aJGNEkC6DvNMblJZQvE=
+			</data>
+		</dict>
+		<key>RookContainer.momd/RookContainer.mom</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			ZyTZokhJx4oyXGPZWT8fAPu9GsbM5YwwsS/X/o6cK/0=
+			</data>
+		</dict>
+		<key>RookContainer.momd/VersionInfo.plist</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			xJEBIzosEP7ifFoAjyC+/8xAkgA4H+bO1U16QyoYJtg=
 			</data>
 		</dict>
 	</dict>
