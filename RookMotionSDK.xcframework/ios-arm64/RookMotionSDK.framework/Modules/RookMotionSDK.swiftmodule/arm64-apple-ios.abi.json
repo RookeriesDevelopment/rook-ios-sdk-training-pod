@@ -4693,6 +4693,33 @@
             "funcSelfKind": "NonMutating"
           },
           {
+            "kind": "Function",
+            "name": "createSensor",
+            "printedName": "createSensor(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "RMSensorAPI",
+                "printedName": "RookMotionSDK.RMSensorAPI",
+                "usr": "s:13RookMotionSDK11RMSensorAPIC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13RookMotionSDK11RMSensorAPIC12createSensoryACSSF",
+            "mangledName": "$s13RookMotionSDK11RMSensorAPIC12createSensoryACSSF",
+            "moduleName": "RookMotionSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
             "kind": "Constructor",
             "name": "init",
             "printedName": "init(from:)",
@@ -40442,6 +40469,50 @@
           },
           {
             "kind": "Function",
+            "name": "saveTrainingInfoRecord",
+            "printedName": "saveTrainingInfoRecord(object:completion:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "RMTrainingInfo",
+                "printedName": "RookMotionSDK.RMTrainingInfo",
+                "usr": "s:13RookMotionSDK14RMTrainingInfoC"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "() -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13RookMotionSDK16RMStorageManagerC22saveTrainingInfoRecord6object10completionyAA010RMTrainingH0C_yyctF",
+            "mangledName": "$s13RookMotionSDK16RMStorageManagerC22saveTrainingInfoRecord6object10completionyAA010RMTrainingH0C_yyctF",
+            "moduleName": "RookMotionSDK",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
             "name": "getAllTrainingInfoRecords",
             "printedName": "getAllTrainingInfoRecords(context:)",
             "children": [
@@ -40512,6 +40583,64 @@
             "declKind": "Func",
             "usr": "s:13RookMotionSDK16RMStorageManagerC11getTraining2by7contextAA14RMTrainingInfoCSgSS_AA11ContextTypeOtF",
             "mangledName": "$s13RookMotionSDK16RMStorageManagerC11getTraining2by7contextAA14RMTrainingInfoCSgSS_AA11ContextTypeOtF",
+            "moduleName": "RookMotionSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getTraining",
+            "printedName": "getTraining(by:context:completion:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ContextType",
+                "printedName": "RookMotionSDK.ContextType",
+                "usr": "s:13RookMotionSDK11ContextTypeO"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(RookMotionSDK.RMTrainingInfo?) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "RookMotionSDK.RMTrainingInfo?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "RMTrainingInfo",
+                        "printedName": "RookMotionSDK.RMTrainingInfo",
+                        "usr": "s:13RookMotionSDK14RMTrainingInfoC"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13RookMotionSDK16RMStorageManagerC11getTraining2by7context10completionySS_AA11ContextTypeOyAA14RMTrainingInfoCSgctF",
+            "mangledName": "$s13RookMotionSDK16RMStorageManagerC11getTraining2by7context10completionySS_AA11ContextTypeOyAA14RMTrainingInfoCSgctF",
             "moduleName": "RookMotionSDK",
             "declAttributes": [
               "AccessControl"
@@ -40643,6 +40772,50 @@
             "declKind": "Func",
             "usr": "s:13RookMotionSDK16RMStorageManagerC28deleteSpecificTrainingRecord6objectyAA14RMTrainingInfoC_tF",
             "mangledName": "$s13RookMotionSDK16RMStorageManagerC28deleteSpecificTrainingRecord6objectyAA14RMTrainingInfoC_tF",
+            "moduleName": "RookMotionSDK",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "deleteSpecificTrainingRecord",
+            "printedName": "deleteSpecificTrainingRecord(object:completion:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "RMTrainingInfo",
+                "printedName": "RookMotionSDK.RMTrainingInfo",
+                "usr": "s:13RookMotionSDK14RMTrainingInfoC"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "() -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13RookMotionSDK16RMStorageManagerC28deleteSpecificTrainingRecord6object10completionyAA14RMTrainingInfoC_yyctF",
+            "mangledName": "$s13RookMotionSDK16RMStorageManagerC28deleteSpecificTrainingRecord6object10completionyAA14RMTrainingInfoC_yyctF",
             "moduleName": "RookMotionSDK",
             "declAttributes": [
               "AccessControl",
@@ -40854,6 +41027,56 @@
           },
           {
             "kind": "Function",
+            "name": "storeTrainingDuration",
+            "printedName": "storeTrainingDuration(time:summary:completion:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "RMTrainingSummaries",
+                "printedName": "RookMotionSDK.RMTrainingSummaries",
+                "usr": "s:13RookMotionSDK19RMTrainingSummariesC"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "() -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13RookMotionSDK16RMStorageManagerC21storeTrainingDuration4time7summary10completionySi_AA19RMTrainingSummariesCyyctF",
+            "mangledName": "$s13RookMotionSDK16RMStorageManagerC21storeTrainingDuration4time7summary10completionySi_AA19RMTrainingSummariesCyyctF",
+            "moduleName": "RookMotionSDK",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
             "name": "addRecordForTraining",
             "printedName": "addRecordForTraining(hrRecord:stepRecord:_:)",
             "children": [
@@ -40990,6 +41213,102 @@
           },
           {
             "kind": "Function",
+            "name": "updateTrainingInfo",
+            "printedName": "updateTrainingInfo(_:sensorUUID:trainingTypeUUID:remoteClass:_:completion:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "hasDefaultArg": true,
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "RookMotionSDK.RMRemoteClass?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "RMRemoteClass",
+                    "printedName": "RookMotionSDK.RMRemoteClass",
+                    "usr": "s:13RookMotionSDK13RMRemoteClassC"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "RMTrainingInfo",
+                "printedName": "RookMotionSDK.RMTrainingInfo",
+                "usr": "s:13RookMotionSDK14RMTrainingInfoC"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "() -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13RookMotionSDK16RMStorageManagerC18updateTrainingInfo_10sensorUUID012trainingTypeJ011remoteClass_10completionySS_SSSgAiA08RMRemoteN0CSgAA010RMTrainingH0CyyctF",
+            "mangledName": "$s13RookMotionSDK16RMStorageManagerC18updateTrainingInfo_10sensorUUID012trainingTypeJ011remoteClass_10completionySS_SSSgAiA08RMRemoteN0CSgAA010RMTrainingH0CyyctF",
+            "moduleName": "RookMotionSDK",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
             "name": "updateTrainingSummariesToSend",
             "printedName": "updateTrainingSummariesToSend(summaryElement:_:)",
             "children": [
@@ -41111,6 +41430,78 @@
           },
           {
             "kind": "Function",
+            "name": "updateTrainingSensorProperties",
+            "printedName": "updateTrainingSensorProperties(name:sensorUUID:training:completion:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "RMTrainingInfo",
+                "printedName": "RookMotionSDK.RMTrainingInfo",
+                "usr": "s:13RookMotionSDK14RMTrainingInfoC"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "() -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13RookMotionSDK16RMStorageManagerC30updateTrainingSensorProperties4name10sensorUUID8training10completionySSSg_AiA14RMTrainingInfoCyyctF",
+            "mangledName": "$s13RookMotionSDK16RMStorageManagerC30updateTrainingSensorProperties4name10sensorUUID8training10completionySSSg_AiA14RMTrainingInfoCyyctF",
+            "moduleName": "RookMotionSDK",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
             "name": "updateTrainingUploadDate",
             "printedName": "updateTrainingUploadDate(for:)",
             "children": [
@@ -41129,6 +41520,50 @@
             "declKind": "Func",
             "usr": "s:13RookMotionSDK16RMStorageManagerC24updateTrainingUploadDate3foryAA14RMTrainingInfoC_tF",
             "mangledName": "$s13RookMotionSDK16RMStorageManagerC24updateTrainingUploadDate3foryAA14RMTrainingInfoC_tF",
+            "moduleName": "RookMotionSDK",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "updateTrainingUploadDate",
+            "printedName": "updateTrainingUploadDate(for:completion:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "RMTrainingInfo",
+                "printedName": "RookMotionSDK.RMTrainingInfo",
+                "usr": "s:13RookMotionSDK14RMTrainingInfoC"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "() -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13RookMotionSDK16RMStorageManagerC24updateTrainingUploadDate3for10completionyAA14RMTrainingInfoC_yyctF",
+            "mangledName": "$s13RookMotionSDK16RMStorageManagerC24updateTrainingUploadDate3for10completionyAA14RMTrainingInfoC_yyctF",
             "moduleName": "RookMotionSDK",
             "declAttributes": [
               "AccessControl",
@@ -41353,6 +41788,57 @@
           },
           {
             "kind": "Function",
+            "name": "storeUserInfo",
+            "printedName": "storeUserInfo(user:context:completion:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "RMUser",
+                "printedName": "RookMotionSDK.RMUser",
+                "usr": "s:13RookMotionSDK6RMUserC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ContextType",
+                "printedName": "RookMotionSDK.ContextType",
+                "usr": "s:13RookMotionSDK11ContextTypeO"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "() -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13RookMotionSDK16RMStorageManagerC13storeUserInfo4user7context10completionyAA6RMUserC_AA11ContextTypeOyyctF",
+            "mangledName": "$s13RookMotionSDK16RMStorageManagerC13storeUserInfo4user7context10completionyAA6RMUserC_AA11ContextTypeOyyctF",
+            "moduleName": "RookMotionSDK",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
             "name": "deleteUserInfo",
             "printedName": "deleteUserInfo(context:)",
             "children": [
@@ -41420,6 +41906,59 @@
           },
           {
             "kind": "Function",
+            "name": "readUserInfo",
+            "printedName": "readUserInfo(context:completion:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ContextType",
+                "printedName": "RookMotionSDK.ContextType",
+                "usr": "s:13RookMotionSDK11ContextTypeO"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(RookMotionSDK.RMUser?) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "RookMotionSDK.RMUser?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "RMUser",
+                        "printedName": "RookMotionSDK.RMUser",
+                        "usr": "s:13RookMotionSDK6RMUserC"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13RookMotionSDK16RMStorageManagerC12readUserInfo7context10completionyAA11ContextTypeO_yAA6RMUserCSgctF",
+            "mangledName": "$s13RookMotionSDK16RMStorageManagerC12readUserInfo7context10completionyAA11ContextTypeO_yAA6RMUserCSgctF",
+            "moduleName": "RookMotionSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
             "name": "getUserUUID",
             "printedName": "getUserUUID(context:)",
             "children": [
@@ -41448,6 +41987,60 @@
             "declKind": "Func",
             "usr": "s:13RookMotionSDK16RMStorageManagerC11getUserUUID7contextSSSgAA11ContextTypeO_tF",
             "mangledName": "$s13RookMotionSDK16RMStorageManagerC11getUserUUID7contextSSSgAA11ContextTypeO_tF",
+            "moduleName": "RookMotionSDK",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getUserUUID",
+            "printedName": "getUserUUID(context:completion:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ContextType",
+                "printedName": "RookMotionSDK.ContextType",
+                "usr": "s:13RookMotionSDK11ContextTypeO"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Swift.String?) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13RookMotionSDK16RMStorageManagerC11getUserUUID7context10completionyAA11ContextTypeO_ySSSgctF",
+            "mangledName": "$s13RookMotionSDK16RMStorageManagerC11getUserUUID7context10completionyAA11ContextTypeO_ySSSgctF",
             "moduleName": "RookMotionSDK",
             "declAttributes": [
               "AccessControl",
@@ -41709,6 +42302,59 @@
           },
           {
             "kind": "Function",
+            "name": "getSensorsWithoutUUID",
+            "printedName": "getSensorsWithoutUUID(context:completion:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ContextType",
+                "printedName": "RookMotionSDK.ContextType",
+                "usr": "s:13RookMotionSDK11ContextTypeO"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "([RookMotionSDK.RMSensorAPI]) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[RookMotionSDK.RMSensorAPI]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "RMSensorAPI",
+                        "printedName": "RookMotionSDK.RMSensorAPI",
+                        "usr": "s:13RookMotionSDK11RMSensorAPIC"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13RookMotionSDK16RMStorageManagerC21getSensorsWithoutUUID7context10completionyAA11ContextTypeO_ySayAA11RMSensorAPICGctF",
+            "mangledName": "$s13RookMotionSDK16RMStorageManagerC21getSensorsWithoutUUID7context10completionyAA11ContextTypeO_ySayAA11RMSensorAPICGctF",
+            "moduleName": "RookMotionSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
             "name": "storeTrainingtype",
             "printedName": "storeTrainingtype(trainingType:context:)",
             "children": [
@@ -41741,6 +42387,66 @@
             ],
             "isFromExtension": true,
             "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "storeTrainingTypes",
+            "printedName": "storeTrainingTypes(trainingTypes:context:completion:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[RookMotionSDK.RMTrainingType]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "RMTrainingType",
+                    "printedName": "RookMotionSDK.RMTrainingType",
+                    "usr": "s:13RookMotionSDK14RMTrainingTypeC"
+                  }
+                ],
+                "usr": "s:Sa"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ContextType",
+                "printedName": "RookMotionSDK.ContextType",
+                "hasDefaultArg": true,
+                "usr": "s:13RookMotionSDK11ContextTypeO"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "() -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13RookMotionSDK16RMStorageManagerC18storeTrainingTypes08trainingH07context10completionySayAA14RMTrainingTypeCG_AA07ContextM0OyyctF",
+            "mangledName": "$s13RookMotionSDK16RMStorageManagerC18storeTrainingTypes08trainingH07context10completionySayAA14RMTrainingTypeCG_AA07ContextM0OyyctF",
+            "moduleName": "RookMotionSDK",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
             "funcSelfKind": "NonMutating"
           },
           {
@@ -41812,6 +42518,61 @@
           },
           {
             "kind": "Function",
+            "name": "readTrainingTypesList",
+            "printedName": "readTrainingTypesList(context:completion:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ContextType",
+                "printedName": "RookMotionSDK.ContextType",
+                "hasDefaultArg": true,
+                "usr": "s:13RookMotionSDK11ContextTypeO"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "([RookMotionSDK.RMTrainingType]) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[RookMotionSDK.RMTrainingType]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "RMTrainingType",
+                        "printedName": "RookMotionSDK.RMTrainingType",
+                        "usr": "s:13RookMotionSDK14RMTrainingTypeC"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13RookMotionSDK16RMStorageManagerC21readTrainingTypesList7context10completionyAA11ContextTypeO_ySayAA010RMTrainingM0CGctF",
+            "mangledName": "$s13RookMotionSDK16RMStorageManagerC21readTrainingTypesList7context10completionyAA11ContextTypeO_ySayAA010RMTrainingM0CGctF",
+            "moduleName": "RookMotionSDK",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
             "name": "getPendingTrainings",
             "printedName": "getPendingTrainings(context:)",
             "children": [
@@ -41840,6 +42601,60 @@
             "declKind": "Func",
             "usr": "s:13RookMotionSDK16RMStorageManagerC19getPendingTrainings7contextSayAA14RMTrainingInfoCGAA11ContextTypeO_tF",
             "mangledName": "$s13RookMotionSDK16RMStorageManagerC19getPendingTrainings7contextSayAA14RMTrainingInfoCGAA11ContextTypeO_tF",
+            "moduleName": "RookMotionSDK",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getPendingTrainings",
+            "printedName": "getPendingTrainings(context:completion:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ContextType",
+                "printedName": "RookMotionSDK.ContextType",
+                "usr": "s:13RookMotionSDK11ContextTypeO"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "([RookMotionSDK.RMTrainingInfo]) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[RookMotionSDK.RMTrainingInfo]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "RMTrainingInfo",
+                        "printedName": "RookMotionSDK.RMTrainingInfo",
+                        "usr": "s:13RookMotionSDK14RMTrainingInfoC"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13RookMotionSDK16RMStorageManagerC19getPendingTrainings7context10completionyAA11ContextTypeO_ySayAA14RMTrainingInfoCGctF",
+            "mangledName": "$s13RookMotionSDK16RMStorageManagerC19getPendingTrainings7context10completionyAA11ContextTypeO_ySayAA14RMTrainingInfoCGctF",
             "moduleName": "RookMotionSDK",
             "declAttributes": [
               "AccessControl",
@@ -42825,6 +43640,55 @@
           },
           {
             "kind": "Function",
+            "name": "storeUser",
+            "printedName": "storeUser(userToStore:context:completion:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "RMUserDTO",
+                "printedName": "RookMotionSDK.RMUserDTO",
+                "usr": "s:13RookMotionSDK9RMUserDTOV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ContextType",
+                "printedName": "RookMotionSDK.ContextType",
+                "usr": "s:13RookMotionSDK11ContextTypeO"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "() -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13RookMotionSDK0A11UserStorageC05storeD011userToStore7context10completionyAA9RMUserDTOV_AA11ContextTypeOyyctF",
+            "mangledName": "$s13RookMotionSDK0A11UserStorageC05storeD011userToStore7context10completionyAA9RMUserDTOV_AA11ContextTypeOyyctF",
+            "moduleName": "RookMotionSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
             "name": "deleteUser",
             "printedName": "deleteUser(context:)",
             "children": [
@@ -42843,6 +43707,49 @@
             "declKind": "Func",
             "usr": "s:13RookMotionSDK0A11UserStorageC06deleteD07contextyAA11ContextTypeO_tF",
             "mangledName": "$s13RookMotionSDK0A11UserStorageC06deleteD07contextyAA11ContextTypeO_tF",
+            "moduleName": "RookMotionSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "deleteAllUser",
+            "printedName": "deleteAllUser(context:completion:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ContextType",
+                "printedName": "RookMotionSDK.ContextType",
+                "usr": "s:13RookMotionSDK11ContextTypeO"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "() -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13RookMotionSDK0A11UserStorageC09deleteAllD07context10completionyAA11ContextTypeO_yyctF",
+            "mangledName": "$s13RookMotionSDK0A11UserStorageC09deleteAllD07context10completionyAA11ContextTypeO_yyctF",
             "moduleName": "RookMotionSDK",
             "declAttributes": [
               "AccessControl"
@@ -42878,6 +43785,58 @@
             "declKind": "Func",
             "usr": "s:13RookMotionSDK0A11UserStorageC04readD07contextAA9RMUserDTOVSgAA11ContextTypeO_tF",
             "mangledName": "$s13RookMotionSDK0A11UserStorageC04readD07contextAA9RMUserDTOVSgAA11ContextTypeO_tF",
+            "moduleName": "RookMotionSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "readUser",
+            "printedName": "readUser(context:completion:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ContextType",
+                "printedName": "RookMotionSDK.ContextType",
+                "usr": "s:13RookMotionSDK11ContextTypeO"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(RookMotionSDK.RMUserDTO?) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "RookMotionSDK.RMUserDTO?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "RMUserDTO",
+                        "printedName": "RookMotionSDK.RMUserDTO",
+                        "usr": "s:13RookMotionSDK9RMUserDTOV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13RookMotionSDK0A11UserStorageC04readD07context10completionyAA11ContextTypeO_yAA9RMUserDTOVSgctF",
+            "mangledName": "$s13RookMotionSDK0A11UserStorageC04readD07context10completionyAA11ContextTypeO_yAA9RMUserDTOVSgctF",
             "moduleName": "RookMotionSDK",
             "declAttributes": [
               "AccessControl"
@@ -63340,6 +64299,114 @@
           },
           {
             "kind": "Function",
+            "name": "createTrainingType",
+            "printedName": "createTrainingType(trainingType:context:completion:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "RMTrainingTypeDTO",
+                "printedName": "RookMotionSDK.RMTrainingTypeDTO",
+                "usr": "s:13RookMotionSDK17RMTrainingTypeDTOV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ContextType",
+                "printedName": "RookMotionSDK.ContextType",
+                "usr": "s:13RookMotionSDK11ContextTypeO"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "() -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13RookMotionSDK0A19TrainingTypeStorageC06createdE008trainingE07context10completionyAA010RMTrainingE3DTOV_AA07ContextE0OyyctF",
+            "mangledName": "$s13RookMotionSDK0A19TrainingTypeStorageC06createdE008trainingE07context10completionyAA010RMTrainingE3DTOV_AA07ContextE0OyyctF",
+            "moduleName": "RookMotionSDK",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "createTrainingTypes",
+            "printedName": "createTrainingTypes(trainingTypes:context:completion:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[RookMotionSDK.RMTrainingType]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "RMTrainingType",
+                    "printedName": "RookMotionSDK.RMTrainingType",
+                    "usr": "s:13RookMotionSDK14RMTrainingTypeC"
+                  }
+                ],
+                "usr": "s:Sa"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ContextType",
+                "printedName": "RookMotionSDK.ContextType",
+                "usr": "s:13RookMotionSDK11ContextTypeO"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "() -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13RookMotionSDK0A19TrainingTypeStorageC06createD5Types08trainingH07context10completionySayAA010RMTrainingE0CG_AA07ContextE0OyyctF",
+            "mangledName": "$s13RookMotionSDK0A19TrainingTypeStorageC06createD5Types08trainingH07context10completionySayAA010RMTrainingE0CG_AA07ContextE0OyyctF",
+            "moduleName": "RookMotionSDK",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
             "name": "deleteTrainingType",
             "printedName": "deleteTrainingType(trainingType:context:)",
             "children": [
@@ -63433,6 +64500,59 @@
             "declKind": "Func",
             "usr": "s:13RookMotionSDK0A19TrainingTypeStorageC04readD5Types7contextSayAA010RMTrainingE3DTOVGAA07ContextE0O_tF",
             "mangledName": "$s13RookMotionSDK0A19TrainingTypeStorageC04readD5Types7contextSayAA010RMTrainingE3DTOVGAA07ContextE0O_tF",
+            "moduleName": "RookMotionSDK",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "readTrainingTypes",
+            "printedName": "readTrainingTypes(context:completion:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ContextType",
+                "printedName": "RookMotionSDK.ContextType",
+                "usr": "s:13RookMotionSDK11ContextTypeO"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "([RookMotionSDK.RMTrainingTypeDTO]) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[RookMotionSDK.RMTrainingTypeDTO]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "RMTrainingTypeDTO",
+                        "printedName": "RookMotionSDK.RMTrainingTypeDTO",
+                        "usr": "s:13RookMotionSDK17RMTrainingTypeDTOV"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13RookMotionSDK0A19TrainingTypeStorageC04readD5Types7context10completionyAA07ContextE0O_ySayAA010RMTrainingE3DTOVGctF",
+            "mangledName": "$s13RookMotionSDK0A19TrainingTypeStorageC04readD5Types7context10completionyAA07ContextE0O_ySayAA010RMTrainingE3DTOVGctF",
             "moduleName": "RookMotionSDK",
             "declAttributes": [
               "AccessControl",
@@ -75314,6 +76434,59 @@
           },
           {
             "kind": "Function",
+            "name": "getSensorsWithoutUUID",
+            "printedName": "getSensorsWithoutUUID(context:completion:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ContextType",
+                "printedName": "RookMotionSDK.ContextType",
+                "usr": "s:13RookMotionSDK11ContextTypeO"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "([RookMotionSDK.RMSensorDTO]) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[RookMotionSDK.RMSensorDTO]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "RMSensorDTO",
+                        "printedName": "RookMotionSDK.RMSensorDTO",
+                        "usr": "s:13RookMotionSDK11RMSensorDTOV"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13RookMotionSDK0A13SensorStorageC21getSensorsWithoutUUID7context10completionyAA11ContextTypeO_ySayAA11RMSensorDTOVGctF",
+            "mangledName": "$s13RookMotionSDK0A13SensorStorageC21getSensorsWithoutUUID7context10completionyAA11ContextTypeO_ySayAA11RMSensorDTOVGctF",
+            "moduleName": "RookMotionSDK",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
             "name": "getSensorUUID",
             "printedName": "getSensorUUID(sensorName:context:)",
             "children": [
@@ -78640,6 +79813,59 @@
           },
           {
             "kind": "Function",
+            "name": "getUnfinishedTrainings",
+            "printedName": "getUnfinishedTrainings(context:completion:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ContextType",
+                "printedName": "RookMotionSDK.ContextType",
+                "usr": "s:13RookMotionSDK11ContextTypeO"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "([RookMotionSDK.RMRookTrainingInfoDTO]) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[RookMotionSDK.RMRookTrainingInfoDTO]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "RMRookTrainingInfoDTO",
+                        "printedName": "RookMotionSDK.RMRookTrainingInfoDTO",
+                        "usr": "s:13RookMotionSDK21RMRookTrainingInfoDTOV"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13RookMotionSDK0A15TrainingStorageC22getUnfinishedTrainings7context10completionyAA11ContextTypeO_ySayAA06RMRookD7InfoDTOVGctF",
+            "mangledName": "$s13RookMotionSDK0A15TrainingStorageC22getUnfinishedTrainings7context10completionyAA11ContextTypeO_ySayAA06RMRookD7InfoDTOVGctF",
+            "moduleName": "RookMotionSDK",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
             "name": "getPendingTrainings",
             "printedName": "getPendingTrainings(context:)",
             "children": [
@@ -78676,6 +79902,59 @@
           },
           {
             "kind": "Function",
+            "name": "getPendingTrainings",
+            "printedName": "getPendingTrainings(context:completion:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ContextType",
+                "printedName": "RookMotionSDK.ContextType",
+                "usr": "s:13RookMotionSDK11ContextTypeO"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "([RookMotionSDK.RMRookTrainingInfoDTO]) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[RookMotionSDK.RMRookTrainingInfoDTO]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "RMRookTrainingInfoDTO",
+                        "printedName": "RookMotionSDK.RMRookTrainingInfoDTO",
+                        "usr": "s:13RookMotionSDK21RMRookTrainingInfoDTOV"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13RookMotionSDK0A15TrainingStorageC19getPendingTrainings7context10completionyAA11ContextTypeO_ySayAA06RMRookD7InfoDTOVGctF",
+            "mangledName": "$s13RookMotionSDK0A15TrainingStorageC19getPendingTrainings7context10completionyAA11ContextTypeO_ySayAA06RMRookD7InfoDTOVGctF",
+            "moduleName": "RookMotionSDK",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
             "name": "deleteTraining",
             "printedName": "deleteTraining(_:context:)",
             "children": [
@@ -78700,6 +79979,56 @@
             "declKind": "Func",
             "usr": "s:13RookMotionSDK0A15TrainingStorageC06deleteD0_7contextyAA06RMRookD7InfoDTOV_AA11ContextTypeOtF",
             "mangledName": "$s13RookMotionSDK0A15TrainingStorageC06deleteD0_7contextyAA06RMRookD7InfoDTOV_AA11ContextTypeOtF",
+            "moduleName": "RookMotionSDK",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "deleteTraining",
+            "printedName": "deleteTraining(_:context:completion:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "RMRookTrainingInfoDTO",
+                "printedName": "RookMotionSDK.RMRookTrainingInfoDTO",
+                "usr": "s:13RookMotionSDK21RMRookTrainingInfoDTOV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ContextType",
+                "printedName": "RookMotionSDK.ContextType",
+                "usr": "s:13RookMotionSDK11ContextTypeO"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "() -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13RookMotionSDK0A15TrainingStorageC06deleteD0_7context10completionyAA06RMRookD7InfoDTOV_AA11ContextTypeOyyctF",
+            "mangledName": "$s13RookMotionSDK0A15TrainingStorageC06deleteD0_7context10completionyAA06RMRookD7InfoDTOV_AA11ContextTypeOyyctF",
             "moduleName": "RookMotionSDK",
             "declAttributes": [
               "AccessControl",
@@ -78778,6 +80107,64 @@
             "declKind": "Func",
             "usr": "s:13RookMotionSDK0A15TrainingStorageC03getD02by7contextAA06RMRookD7InfoDTOVSgSS_AA11ContextTypeOtF",
             "mangledName": "$s13RookMotionSDK0A15TrainingStorageC03getD02by7contextAA06RMRookD7InfoDTOVSgSS_AA11ContextTypeOtF",
+            "moduleName": "RookMotionSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getTraining",
+            "printedName": "getTraining(by:context:completion:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ContextType",
+                "printedName": "RookMotionSDK.ContextType",
+                "usr": "s:13RookMotionSDK11ContextTypeO"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(RookMotionSDK.RMRookTrainingInfoDTO?) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "RookMotionSDK.RMRookTrainingInfoDTO?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "RMRookTrainingInfoDTO",
+                        "printedName": "RookMotionSDK.RMRookTrainingInfoDTO",
+                        "usr": "s:13RookMotionSDK21RMRookTrainingInfoDTOV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13RookMotionSDK0A15TrainingStorageC03getD02by7context10completionySS_AA11ContextTypeOyAA06RMRookD7InfoDTOVSgctF",
+            "mangledName": "$s13RookMotionSDK0A15TrainingStorageC03getD02by7context10completionySS_AA11ContextTypeOyAA06RMRookD7InfoDTOVSgctF",
             "moduleName": "RookMotionSDK",
             "declAttributes": [
               "AccessControl"
@@ -91027,35 +92414,35 @@
     {
       "filePath": "\/Users\/franciscoguerreroescamilla\/Developer\/RookMotion\/iosSDK\/RookMotionSDK\/RookMotionSDK\/Source\/RookMotionLink\/Models\/User\/RMUser-Realm.swift",
       "kind": "StringLiteral",
-      "offset": 6929,
+      "offset": 7112,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/franciscoguerreroescamilla\/Developer\/RookMotion\/iosSDK\/RookMotionSDK\/RookMotionSDK\/Source\/RookMotionLink\/Models\/User\/RMUser-Realm.swift",
       "kind": "StringLiteral",
-      "offset": 6977,
+      "offset": 7160,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/franciscoguerreroescamilla\/Developer\/RookMotion\/iosSDK\/RookMotionSDK\/RookMotionSDK\/Source\/RookMotionLink\/Models\/User\/RMUser-Realm.swift",
       "kind": "StringLiteral",
-      "offset": 7035,
+      "offset": 7218,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/franciscoguerreroescamilla\/Developer\/RookMotion\/iosSDK\/RookMotionSDK\/RookMotionSDK\/Source\/RookMotionLink\/Models\/User\/RMUser-Realm.swift",
       "kind": "StringLiteral",
-      "offset": 7359,
+      "offset": 7542,
       "length": 20,
       "value": "\"resting_heart_rate\""
     },
     {
       "filePath": "\/Users\/franciscoguerreroescamilla\/Developer\/RookMotion\/iosSDK\/RookMotionSDK\/RookMotionSDK\/Source\/RookMotionLink\/Models\/User\/RMUser-Realm.swift",
       "kind": "StringLiteral",
-      "offset": 7359,
+      "offset": 7542,
       "length": 20,
       "value": "\"resting_heart_rate\""
     },
@@ -91615,7 +93002,14 @@
     {
       "filePath": "\/Users\/franciscoguerreroescamilla\/Developer\/RookMotion\/iosSDK\/RookMotionSDK\/RookMotionSDK\/Source\/RookMotionLink\/Storage\/RMStorageManager.swift",
       "kind": "StringLiteral",
-      "offset": 7693,
+      "offset": 10238,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/franciscoguerreroescamilla\/Developer\/RookMotion\/iosSDK\/RookMotionSDK\/RookMotionSDK\/Source\/RookMotionLink\/Storage\/RMStorageManager.swift",
+      "kind": "StringLiteral",
+      "offset": 11041,
       "length": 2,
       "value": "\"\""
     },
@@ -91853,7 +93247,7 @@
     {
       "filePath": "\/Users\/franciscoguerreroescamilla\/Developer\/RookMotion\/iosSDK\/RookMotionSDK\/RookMotionSDK\/Source\/RookMotionLink\/WatchCommunication\/RMCommunicationManager.swift",
       "kind": "Dictionary",
-      "offset": 3860,
+      "offset": 3930,
       "length": 3,
       "value": "[]"
     },
@@ -92931,14 +94325,14 @@
     {
       "filePath": "\/Users\/franciscoguerreroescamilla\/Developer\/RookMotion\/iosSDK\/RookMotionSDK\/RookMotionSDK\/Source\/RookMotionLink\/Models\/Training\/Training Type\/RMTrainingTypeDTO.swift",
       "kind": "StringLiteral",
-      "offset": 2398,
+      "offset": 2867,
       "length": 13,
       "value": "\"steps_types\""
     },
     {
       "filePath": "\/Users\/franciscoguerreroescamilla\/Developer\/RookMotion\/iosSDK\/RookMotionSDK\/RookMotionSDK\/Source\/RookMotionLink\/Models\/Training\/Training Type\/RMTrainingTypeDTO.swift",
       "kind": "StringLiteral",
-      "offset": 2398,
+      "offset": 2867,
       "length": 13,
       "value": "\"steps_types\""
     },
@@ -93379,7 +94773,7 @@
     {
       "filePath": "\/Users\/franciscoguerreroescamilla\/Developer\/RookMotion\/iosSDK\/RookMotionSDK\/RookMotionSDK\/Source\/RookMotionLink\/Storage\/CoreData\/Training\/RookTrainingStorage.swift",
       "kind": "StringLiteral",
-      "offset": 17076,
+      "offset": 21659,
       "length": 2,
       "value": "\"\""
     },

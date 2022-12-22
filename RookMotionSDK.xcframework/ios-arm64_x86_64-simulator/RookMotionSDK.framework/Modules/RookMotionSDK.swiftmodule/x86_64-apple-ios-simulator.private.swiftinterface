@@ -269,6 +269,7 @@ public struct RMStepRecordsDTO : Swift.Encodable {
   public var deviceUUID: Foundation.UUID?
   public var ownershipType: Swift.String?
   public func createSensorFromPeripheral(_ sensor: CoreBluetooth.CBPeripheral) -> RookMotionSDK.RMSensorAPI
+  public func createSensor(_ sensorName: Swift.String) -> RookMotionSDK.RMSensorAPI
   @objc deinit
   public func encode(to encoder: Swift.Encoder) throws
   required public init(from decoder: Swift.Decoder) throws
@@ -1148,9 +1149,12 @@ public struct RMCenterMultimedia : Swift.Decodable {
 }
 extension RookMotionSDK.RMStorageManager {
   public func storeUserInfo(user: RookMotionSDK.RMUser, context: RookMotionSDK.ContextType = .viewContext) throws
+  public func storeUserInfo(user: RookMotionSDK.RMUser, context: RookMotionSDK.ContextType, completion: @escaping () -> Swift.Void)
   public func deleteUserInfo(context: RookMotionSDK.ContextType = .viewContext)
   public func readUserInfo(context: RookMotionSDK.ContextType = .viewContext) -> RookMotionSDK.RMUser?
+  public func readUserInfo(context: RookMotionSDK.ContextType, completion: @escaping (RookMotionSDK.RMUser?) -> Swift.Void)
   public func getUserUUID(context: RookMotionSDK.ContextType = .viewContext) -> Swift.String?
+  public func getUserUUID(context: RookMotionSDK.ContextType, completion: @escaping (Swift.String?) -> Swift.Void)
   public func getUserToken(context: RookMotionSDK.ContextType = .viewContext) -> Swift.String?
   public func getUserPseudonym(context: RookMotionSDK.ContextType = .viewContext) -> Swift.String?
   public func storeSensor(sensor: RookMotionSDK.RMSensorAPI, context: RookMotionSDK.ContextType = .viewContext) throws
@@ -1158,10 +1162,14 @@ extension RookMotionSDK.RMStorageManager {
   public func readSensorsList(context: RookMotionSDK.ContextType = .viewContext) -> [RookMotionSDK.RMSensorAPI]
   public func getSensorUUID(sensorName: Swift.String, context: RookMotionSDK.ContextType = .viewContext) -> Swift.String
   public func getSensorsWithoutUUID(context: RookMotionSDK.ContextType = .viewContext) -> [RookMotionSDK.RMSensorAPI]
+  public func getSensorsWithoutUUID(context: RookMotionSDK.ContextType, completion: @escaping ([RookMotionSDK.RMSensorAPI]) -> Swift.Void)
   public func storeTrainingtype(trainingType: RookMotionSDK.RMTrainingType, context: RookMotionSDK.ContextType = .viewContext) throws
+  public func storeTrainingTypes(trainingTypes: [RookMotionSDK.RMTrainingType], context: RookMotionSDK.ContextType = .viewContext, completion: @escaping () -> Swift.Void)
   public func deleteAllTrainingTypes(context: RookMotionSDK.ContextType = .viewContext)
   public func readTrainingTypesList(context: RookMotionSDK.ContextType = .viewContext) -> [RookMotionSDK.RMTrainingType]
+  public func readTrainingTypesList(context: RookMotionSDK.ContextType = .viewContext, completion: @escaping ([RookMotionSDK.RMTrainingType]) -> Swift.Void)
   public func getPendingTrainings(context: RookMotionSDK.ContextType = .viewContext) -> [RookMotionSDK.RMTrainingInfo]
+  public func getPendingTrainings(context: RookMotionSDK.ContextType, completion: @escaping ([RookMotionSDK.RMTrainingInfo]) -> Swift.Void)
   public func getTrainingsToUpload(context: RookMotionSDK.ContextType = .viewContext) -> [RookMotionSDK.RMTrainingInfo]
   public func getUnfinishedTrainings(context: RookMotionSDK.ContextType = .viewContext) -> [RookMotionSDK.RMTrainingInfo]
 }
@@ -1190,24 +1198,31 @@ public struct RMPhysiologicalVariablesDTO {
 @objc @_inheritsConvenienceInitializers public class RMStorageManager : ObjectiveC.NSObject {
   @objc override dynamic public init()
   public func saveTrainingInfoRecord(object: RookMotionSDK.RMTrainingInfo)
+  public func saveTrainingInfoRecord(object: RookMotionSDK.RMTrainingInfo, completion: @escaping () -> Swift.Void)
   public func getAllTrainingInfoRecords(context: RookMotionSDK.ContextType = .viewContext) -> [RookMotionSDK.RMTrainingInfo]
   public func getTraining(by start: Swift.String, context: RookMotionSDK.ContextType) -> RookMotionSDK.RMTrainingInfo?
+  public func getTraining(by start: Swift.String, context: RookMotionSDK.ContextType, completion: @escaping (RookMotionSDK.RMTrainingInfo?) -> Swift.Void)
   public func cleanDataBase()
   public func deleteAllStepsRecords()
   public func deleteAllHeartRateRecords()
   public func deleteAllTrainingInfoRecords()
   public func deleteAllTrainingSummaries()
   public func deleteSpecificTrainingRecord(object: RookMotionSDK.RMTrainingInfo)
+  public func deleteSpecificTrainingRecord(object: RookMotionSDK.RMTrainingInfo, completion: @escaping () -> Swift.Void)
   public func generateSummaries(summary: RookMotionSDK.RMTrainingSummaries, _ heartRateRecordsData: RookMotionSDK.RMHeartRateDataRecords?, _ stepsRecordsData: RookMotionSDK.RMStepDataRecords?, time: Swift.Int)
   public func storeZonesSummaries(summary: RookMotionSDK.RMTrainingSummaries, deltaTime: Swift.Float, _ delta_calories: Swift.Float, effort: Swift.Int, time: Swift.Int)
   public func storeStepsZonesSummaries(summary: RookMotionSDK.RMTrainingSummaries, delta_steps: Swift.Int, cadence: Swift.Float, cadenceElements: Swift.Int, effort: Swift.Int, time: Swift.Int)
   public func storeTrainingDuration(time: Swift.Int, summary: RookMotionSDK.RMTrainingSummaries)
+  public func storeTrainingDuration(time: Swift.Int, summary: RookMotionSDK.RMTrainingSummaries, completion: @escaping () -> Swift.Void)
   public func addRecordForTraining(hrRecord: RookMotionSDK.RMHeartRateDataRecords? = nil, stepRecord: RookMotionSDK.RMStepDataRecords? = nil, _ training: RookMotionSDK.RMTrainingInfo)
   public func updateTrainingInfo(_ stop: Swift.String = "", sensorUUID: Swift.String? = nil, trainingTypeUUID: Swift.String? = nil, remoteClass: RookMotionSDK.RMRemoteClass? = nil, _ training: RookMotionSDK.RMTrainingInfo)
+  public func updateTrainingInfo(_ stop: Swift.String = "", sensorUUID: Swift.String? = nil, trainingTypeUUID: Swift.String? = nil, remoteClass: RookMotionSDK.RMRemoteClass? = nil, _ training: RookMotionSDK.RMTrainingInfo, completion: @escaping () -> Swift.Void)
   public func updateTrainingSummariesToSend(summaryElement: RookMotionSDK.RMTrainingSummary, _ training: RookMotionSDK.RMTrainingInfo)
   public func updateTrainingAuxSummaries(_ training: RookMotionSDK.RMTrainingInfo, auxSummary: RookMotionSDK.RMTrainingAuxiliarSummary)
   public func updateTrainingSensorProperties(name: Swift.String?, sensorUUID: Swift.String?, training: RookMotionSDK.RMTrainingInfo)
+  public func updateTrainingSensorProperties(name: Swift.String?, sensorUUID: Swift.String?, training: RookMotionSDK.RMTrainingInfo, completion: @escaping () -> Swift.Void)
   public func updateTrainingUploadDate(for training: RookMotionSDK.RMTrainingInfo)
+  public func updateTrainingUploadDate(for training: RookMotionSDK.RMTrainingInfo, completion: @escaping () -> Swift.Void)
   public func updateTrainingRemoteInfo(classUUID: Swift.String, roomUUID: Swift.String, trainingName: Swift.String, classDelay: Swift.Int, useSteps: Swift.Int, stepOptions: Swift.String, _ training: RookMotionSDK.RMTrainingInfo)
   public func storeTrainingPreferences(_ preference: RookMotionSDK.RMTrainingPreferences)
   public func readTrainingPreferences() -> RookMotionSDK.RMTrainingPreferences?
@@ -1247,8 +1262,11 @@ public protocol RookUserStorageProtocol {
 public class RookUserStorage : RookMotionSDK.RookUserStorageProtocol {
   public init(context: RookMotionSDK.ContextType)
   public func storeUser(userToStore: RookMotionSDK.RMUserDTO, context: RookMotionSDK.ContextType)
+  public func storeUser(userToStore: RookMotionSDK.RMUserDTO, context: RookMotionSDK.ContextType, completion: @escaping () -> Swift.Void)
   public func deleteUser(context: RookMotionSDK.ContextType)
+  public func deleteAllUser(context: RookMotionSDK.ContextType, completion: @escaping () -> Swift.Void)
   public func readUser(context: RookMotionSDK.ContextType) -> RookMotionSDK.RMUserDTO?
+  public func readUser(context: RookMotionSDK.ContextType, completion: @escaping (RookMotionSDK.RMUserDTO?) -> Swift.Void)
   @objc deinit
 }
 @_hasMissingDesignatedInitializers public class RMTrainingSummary : Swift.Codable {
@@ -1638,9 +1656,12 @@ public enum TrainingTypeErrors : Swift.Error {
 public class RookTrainingTypeStorage : RookMotionSDK.TrainingTypeStorageProtocol {
   public init(context: RookMotionSDK.ContextType)
   public func createTrainingType(trainingType: RookMotionSDK.RMTrainingTypeDTO, context: RookMotionSDK.ContextType)
+  public func createTrainingType(trainingType: RookMotionSDK.RMTrainingTypeDTO, context: RookMotionSDK.ContextType, completion: @escaping () -> Swift.Void)
+  public func createTrainingTypes(trainingTypes: [RookMotionSDK.RMTrainingType], context: RookMotionSDK.ContextType, completion: @escaping () -> Swift.Void)
   public func deleteTrainingType(trainingType: RookMotionSDK.RMTrainingTypeDTO, context: RookMotionSDK.ContextType)
   public func updateTrainingType(trainingType: RookMotionSDK.RMTrainingTypeDTO, context: RookMotionSDK.ContextType)
   public func readTrainingTypes(context: RookMotionSDK.ContextType) -> [RookMotionSDK.RMTrainingTypeDTO]
+  public func readTrainingTypes(context: RookMotionSDK.ContextType, completion: @escaping ([RookMotionSDK.RMTrainingTypeDTO]) -> Swift.Void)
   public func deleteAll(context: RookMotionSDK.ContextType)
   @objc deinit
 }
@@ -1928,6 +1949,7 @@ public class RookSensorStorage : RookMotionSDK.RookSensorStorageProtocol {
   public func updateSensor(sensor: RookMotionSDK.RMSensorDTO, context: RookMotionSDK.ContextType)
   public func readSensors(context: RookMotionSDK.ContextType) -> [RookMotionSDK.RMSensorDTO]
   public func getSensorsWithoutUUID(context: RookMotionSDK.ContextType) -> [RookMotionSDK.RMSensorDTO]
+  public func getSensorsWithoutUUID(context: RookMotionSDK.ContextType, completion: @escaping ([RookMotionSDK.RMSensorDTO]) -> Swift.Void)
   public func getSensorUUID(sensorName: Swift.String, context: RookMotionSDK.ContextType) -> Swift.String
   public func deleteAll(context: RookMotionSDK.ContextType)
   @objc deinit
@@ -2125,10 +2147,14 @@ extension RookMotionSDK.RookTraining : Swift.Identifiable {
 public class RookTrainingStorage {
   public init(context: RookMotionSDK.ContextType)
   public func getUnfinishedTrainings(context: RookMotionSDK.ContextType) -> [RookMotionSDK.RMRookTrainingInfoDTO]
+  public func getUnfinishedTrainings(context: RookMotionSDK.ContextType, completion: @escaping ([RookMotionSDK.RMRookTrainingInfoDTO]) -> Swift.Void)
   public func getPendingTrainings(context: RookMotionSDK.ContextType) -> [RookMotionSDK.RMRookTrainingInfoDTO]
+  public func getPendingTrainings(context: RookMotionSDK.ContextType, completion: @escaping ([RookMotionSDK.RMRookTrainingInfoDTO]) -> Swift.Void)
   public func deleteTraining(_ training: RookMotionSDK.RMRookTrainingInfoDTO, context: RookMotionSDK.ContextType)
+  public func deleteTraining(_ training: RookMotionSDK.RMRookTrainingInfoDTO, context: RookMotionSDK.ContextType, completion: @escaping () -> Swift.Void)
   public func readAllTrainings(context: RookMotionSDK.ContextType) -> [RookMotionSDK.RMRookTrainingInfoDTO]
   public func getTraining(by start: Swift.String, context: RookMotionSDK.ContextType) -> RookMotionSDK.RMRookTrainingInfoDTO?
+  public func getTraining(by start: Swift.String, context: RookMotionSDK.ContextType, completion: @escaping (RookMotionSDK.RMRookTrainingInfoDTO?) -> Swift.Void)
   public func deleteAllTrainingRecords(context: RookMotionSDK.ContextType)
   public func deleteAll(from entity: RookMotionSDK.TrainingEntities, context: RookMotionSDK.ContextType)
   @objc deinit
