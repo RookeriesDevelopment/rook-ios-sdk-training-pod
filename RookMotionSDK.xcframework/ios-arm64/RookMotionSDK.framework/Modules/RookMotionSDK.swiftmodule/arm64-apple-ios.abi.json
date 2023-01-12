@@ -4666,6 +4666,117 @@
             ]
           },
           {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(sensorName:sensorUUID:sensorMAC:updatedAt:deviceUUID:ownershipType:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "RMSensorAPI",
+                "printedName": "RookMotionSDK.RMSensorAPI",
+                "usr": "s:13RookMotionSDK11RMSensorAPIC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.UUID?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UUID",
+                    "printedName": "Foundation.UUID",
+                    "usr": "s:10Foundation4UUIDV"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:13RookMotionSDK11RMSensorAPIC10sensorName0F4UUID0F3MAC9updatedAt06deviceH013ownershipTypeACSSSg_A3J10Foundation0H0VSgAJtcfc",
+            "mangledName": "$s13RookMotionSDK11RMSensorAPIC10sensorName0F4UUID0F3MAC9updatedAt06deviceH013ownershipTypeACSSSg_A3J10Foundation0H0VSgAJtcfc",
+            "moduleName": "RookMotionSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
             "kind": "Function",
             "name": "createSensorFromPeripheral",
             "printedName": "createSensorFromPeripheral(_:)",
@@ -4832,7 +4943,6 @@
           "AccessControl",
           "RawDocComment"
         ],
-        "hasMissingDesignatedInitializers": true,
         "conformances": [
           {
             "kind": "Conformance",
@@ -91420,70 +91530,70 @@
     {
       "filePath": "\/Users\/franciscoguerreroescamilla\/Developer\/RookMotion\/iosSDK\/RookMotionSDK\/RookMotionSDK\/Source\/RookMotionLink\/Models\/Sensor\/RMSensorApi-Realm.swift",
       "kind": "StringLiteral",
-      "offset": 558,
+      "offset": 942,
       "length": 13,
       "value": "\"sensor_uuid\""
     },
     {
       "filePath": "\/Users\/franciscoguerreroescamilla\/Developer\/RookMotion\/iosSDK\/RookMotionSDK\/RookMotionSDK\/Source\/RookMotionLink\/Models\/Sensor\/RMSensorApi-Realm.swift",
       "kind": "StringLiteral",
-      "offset": 597,
+      "offset": 981,
       "length": 13,
       "value": "\"sensor_name\""
     },
     {
       "filePath": "\/Users\/franciscoguerreroescamilla\/Developer\/RookMotion\/iosSDK\/RookMotionSDK\/RookMotionSDK\/Source\/RookMotionLink\/Models\/Sensor\/RMSensorApi-Realm.swift",
       "kind": "StringLiteral",
-      "offset": 636,
+      "offset": 1020,
       "length": 12,
       "value": "\"sensor_mac\""
     },
     {
       "filePath": "\/Users\/franciscoguerreroescamilla\/Developer\/RookMotion\/iosSDK\/RookMotionSDK\/RookMotionSDK\/Source\/RookMotionLink\/Models\/Sensor\/RMSensorApi-Realm.swift",
       "kind": "StringLiteral",
-      "offset": 674,
+      "offset": 1058,
       "length": 12,
       "value": "\"updated_at\""
     },
     {
       "filePath": "\/Users\/franciscoguerreroescamilla\/Developer\/RookMotion\/iosSDK\/RookMotionSDK\/RookMotionSDK\/Source\/RookMotionLink\/Models\/Sensor\/RMSensorApi-Realm.swift",
       "kind": "StringLiteral",
-      "offset": 712,
+      "offset": 1096,
       "length": 16,
       "value": "\"ownership_type\""
     },
     {
       "filePath": "\/Users\/franciscoguerreroescamilla\/Developer\/RookMotion\/iosSDK\/RookMotionSDK\/RookMotionSDK\/Source\/RookMotionLink\/Models\/Sensor\/RMSensorApi-Realm.swift",
       "kind": "StringLiteral",
-      "offset": 558,
+      "offset": 942,
       "length": 13,
       "value": "\"sensor_uuid\""
     },
     {
       "filePath": "\/Users\/franciscoguerreroescamilla\/Developer\/RookMotion\/iosSDK\/RookMotionSDK\/RookMotionSDK\/Source\/RookMotionLink\/Models\/Sensor\/RMSensorApi-Realm.swift",
       "kind": "StringLiteral",
-      "offset": 597,
+      "offset": 981,
       "length": 13,
       "value": "\"sensor_name\""
     },
     {
       "filePath": "\/Users\/franciscoguerreroescamilla\/Developer\/RookMotion\/iosSDK\/RookMotionSDK\/RookMotionSDK\/Source\/RookMotionLink\/Models\/Sensor\/RMSensorApi-Realm.swift",
       "kind": "StringLiteral",
-      "offset": 636,
+      "offset": 1020,
       "length": 12,
       "value": "\"sensor_mac\""
     },
     {
       "filePath": "\/Users\/franciscoguerreroescamilla\/Developer\/RookMotion\/iosSDK\/RookMotionSDK\/RookMotionSDK\/Source\/RookMotionLink\/Models\/Sensor\/RMSensorApi-Realm.swift",
       "kind": "StringLiteral",
-      "offset": 674,
+      "offset": 1058,
       "length": 12,
       "value": "\"updated_at\""
     },
     {
       "filePath": "\/Users\/franciscoguerreroescamilla\/Developer\/RookMotion\/iosSDK\/RookMotionSDK\/RookMotionSDK\/Source\/RookMotionLink\/Models\/Sensor\/RMSensorApi-Realm.swift",
       "kind": "StringLiteral",
-      "offset": 712,
+      "offset": 1096,
       "length": 16,
       "value": "\"ownership_type\""
     },

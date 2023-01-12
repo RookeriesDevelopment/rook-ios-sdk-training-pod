@@ -261,13 +261,14 @@ public struct RMStepRecordsDTO : Swift.Encodable {
   @objc override dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
   @objc deinit
 }
-@_hasMissingDesignatedInitializers public class RMSensorAPI : Swift.Codable {
+public class RMSensorAPI : Swift.Codable {
   public var sensorName: Swift.String?
   public var sensorUUID: Swift.String?
   public var sensorMAC: Swift.String?
   public var updatedAt: Swift.String?
   public var deviceUUID: Foundation.UUID?
   public var ownershipType: Swift.String?
+  public init(sensorName: Swift.String? = nil, sensorUUID: Swift.String? = nil, sensorMAC: Swift.String? = nil, updatedAt: Swift.String? = nil, deviceUUID: Foundation.UUID? = nil, ownershipType: Swift.String? = nil)
   public func createSensorFromPeripheral(_ sensor: CoreBluetooth.CBPeripheral) -> RookMotionSDK.RMSensorAPI
   public func createSensor(_ sensorName: Swift.String) -> RookMotionSDK.RMSensorAPI
   @objc deinit
