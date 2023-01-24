@@ -1353,6 +1353,8 @@ extension RookMotionSDK.RMCommunicationManager : WatchConnectivity.WCSessionDele
   @objc dynamic public func session(_ session: WatchConnectivity.WCSession, activationDidCompleteWith activationState: WatchConnectivity.WCSessionActivationState, error: Swift.Error?)
   @objc dynamic public func session(_ session: WatchConnectivity.WCSession, didReceiveUserInfo userInfo: [Swift.String : Any] = [:])
   @objc dynamic public func session(_ session: WatchConnectivity.WCSession, didReceiveMessage message: [Swift.String : Any], replyHandler: @escaping ([Swift.String : Any]) -> Swift.Void)
+  @objc dynamic public func session(_ session: WatchConnectivity.WCSession, didReceiveMessage message: [Swift.String : Any])
+  @objc dynamic public func sessionReachabilityDidChange(_ session: WatchConnectivity.WCSession)
 }
 @_hasMissingDesignatedInitializers public class RMTrainingStoragedRecords : Swift.Codable {
   public var hrDerivedRecords: [RookMotionSDK.RMHeartRateDataRecords]
