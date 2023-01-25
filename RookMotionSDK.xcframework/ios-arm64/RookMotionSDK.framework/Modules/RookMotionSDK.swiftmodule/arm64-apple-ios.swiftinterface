@@ -1173,6 +1173,7 @@ extension RookMotionSDK.RMStorageManager {
   public func getPendingTrainings(context: RookMotionSDK.ContextType, completion: @escaping ([RookMotionSDK.RMTrainingInfo]) -> Swift.Void)
   public func getTrainingsToUpload(context: RookMotionSDK.ContextType = .viewContext) -> [RookMotionSDK.RMTrainingInfo]
   public func getUnfinishedTrainings(context: RookMotionSDK.ContextType = .viewContext) -> [RookMotionSDK.RMTrainingInfo]
+  public func getUnfinishedTrainings(context: RookMotionSDK.ContextType = .viewContext, completion: @escaping ([RookMotionSDK.RMTrainingInfo]) -> Swift.Void)
 }
 @_hasMissingDesignatedInitializers public class RMHrRecordRetrived : Swift.Codable {
   public var heartRate: Swift.String?

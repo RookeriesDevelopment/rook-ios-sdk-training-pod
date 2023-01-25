@@ -42847,6 +42847,61 @@
             ],
             "isFromExtension": true,
             "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getUnfinishedTrainings",
+            "printedName": "getUnfinishedTrainings(context:completion:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ContextType",
+                "printedName": "RookMotionSDK.ContextType",
+                "hasDefaultArg": true,
+                "usr": "s:13RookMotionSDK11ContextTypeO"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "([RookMotionSDK.RMTrainingInfo]) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[RookMotionSDK.RMTrainingInfo]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "RMTrainingInfo",
+                        "printedName": "RookMotionSDK.RMTrainingInfo",
+                        "usr": "s:13RookMotionSDK14RMTrainingInfoC"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13RookMotionSDK16RMStorageManagerC22getUnfinishedTrainings7context10completionyAA11ContextTypeO_ySayAA14RMTrainingInfoCGctF",
+            "mangledName": "$s13RookMotionSDK16RMStorageManagerC22getUnfinishedTrainings7context10completionyAA11ContextTypeO_ySayAA14RMTrainingInfoCGctF",
+            "moduleName": "RookMotionSDK",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
           }
         ],
         "declKind": "Class",

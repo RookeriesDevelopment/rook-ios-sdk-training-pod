@@ -18,43 +18,43 @@
 		</data>
 		<key>Modules/RookMotionSDK.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		4L5exqgbwJoiJtR7CzDIgRZPSqc=
+		Ha7Ag9AOna0wpVuirKSy7fGm52M=
 		</data>
 		<key>Modules/RookMotionSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		e2+M0rCsnO4RArjIYQawFfxDC3c=
+		dc3HqZz8B7/hb+OL6vMDRC3pFWM=
 		</data>
 		<key>Modules/RookMotionSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		Mshq/4CEEZyODjxp5FVHRNaRmjs=
+		pV9uQukwJJjPo+jBDP6LlbEuj0M=
 		</data>
 		<key>Modules/RookMotionSDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		e2+M0rCsnO4RArjIYQawFfxDC3c=
+		dc3HqZz8B7/hb+OL6vMDRC3pFWM=
 		</data>
 		<key>Modules/RookMotionSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		fyEz7jYjQw0c74lEpo7wu9TAq8Y=
+		LScUr8j4QzzJA31SK7Hy1kk9ERA=
 		</data>
 		<key>Modules/RookMotionSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		4L5exqgbwJoiJtR7CzDIgRZPSqc=
+		Ha7Ag9AOna0wpVuirKSy7fGm52M=
 		</data>
 		<key>Modules/RookMotionSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		M+lUyyOi2/uo6hNR+TFMk0EMosQ=
+		vwSdhS5rQCuBdaT8bTzbMrQVEnA=
 		</data>
 		<key>Modules/RookMotionSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		NX5JZ7TTUaBoXfiXRpYoHDnk/I8=
+		sHne7C66ft47KV1HR3Gia7nH44A=
 		</data>
 		<key>Modules/RookMotionSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		M+lUyyOi2/uo6hNR+TFMk0EMosQ=
+		vwSdhS5rQCuBdaT8bTzbMrQVEnA=
 		</data>
 		<key>Modules/RookMotionSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		Oie4gxbCZ1GpJ6UjVB3G0R876j8=
+		h00djIUTWJQYTFUKfqUvQJ8gC3I=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -89,70 +89,70 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Ijr4IwHlOklsboEzbjzh/KHQsfFficcyx3bp8hR9IlE=
+			rzw7cVfnNX/rpD2WLZSJcPl9tPZShoHx/A//o7rsWXg=
 			</data>
 		</dict>
 		<key>Modules/RookMotionSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			t7FLGjyaUYDoM54CeXG1bE3z4IxP+m59f3rfmeMzjss=
+			xG0qKcoCzXAdovM7VPgDCU3DnrCp9FQZswaFv0r4d+U=
 			</data>
 		</dict>
 		<key>Modules/RookMotionSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			f14ErsM07F0SrR/A/HlLYgV8p17h2mOAOuIXnL+mc7Q=
+			pV+l/zbV7kvtf7yeHscffr56c0P6GMWAoU6oWd0m+VI=
 			</data>
 		</dict>
 		<key>Modules/RookMotionSDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			t7FLGjyaUYDoM54CeXG1bE3z4IxP+m59f3rfmeMzjss=
+			xG0qKcoCzXAdovM7VPgDCU3DnrCp9FQZswaFv0r4d+U=
 			</data>
 		</dict>
 		<key>Modules/RookMotionSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			sxutQ8oKSbufs6Oxc4SFap0hN1gaJ64XTSl/S/4zaSY=
+			pcBqZtA0XDQ5AhilpwGYKJxh0mqaUw2rSxhpWx3GcYU=
 			</data>
 		</dict>
 		<key>Modules/RookMotionSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Ijr4IwHlOklsboEzbjzh/KHQsfFficcyx3bp8hR9IlE=
+			rzw7cVfnNX/rpD2WLZSJcPl9tPZShoHx/A//o7rsWXg=
 			</data>
 		</dict>
 		<key>Modules/RookMotionSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			0ZqysnYuHsMoL8nqxTzUzdax/247WgmgQaAnQzcA8R0=
+			fqxD3WohwqiH03+vxk5Kvlibp1r78+GkOYF/Dq4wP7Q=
 			</data>
 		</dict>
 		<key>Modules/RookMotionSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			K9ggscStOC6srBrD4xNVcMk/Bo8tkjo0RVzD6Tzsyy8=
+			Bkdsh2iDgbyQ1CCbHb1ULEhTGGGh1kpfVWKFp3uBc5k=
 			</data>
 		</dict>
 		<key>Modules/RookMotionSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			0ZqysnYuHsMoL8nqxTzUzdax/247WgmgQaAnQzcA8R0=
+			fqxD3WohwqiH03+vxk5Kvlibp1r78+GkOYF/Dq4wP7Q=
 			</data>
 		</dict>
 		<key>Modules/RookMotionSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			hEJtB62mRKTJ4p+1KK7x71eWV6VpI3HLGyZL9M0rYFo=
+			dvmtyue1wKpyD9/TokmxDd5EUMf+eCv3NdBMwjwLUVo=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
