@@ -1201,6 +1201,7 @@ public struct RMPhysiologicalVariablesDTO {
   @objc override dynamic public init()
   public func saveTrainingInfoRecord(object: RookMotionSDK.RMTrainingInfo)
   public func saveTrainingInfoRecord(object: RookMotionSDK.RMTrainingInfo, completion: @escaping () -> Swift.Void)
+  public func storeTraining(_ training: RookMotionSDK.RMTrainingInfo, completion: @escaping () -> Swift.Void)
   public func getAllTrainingInfoRecords(context: RookMotionSDK.ContextType = .viewContext) -> [RookMotionSDK.RMTrainingInfo]
   public func getTraining(by start: Swift.String, context: RookMotionSDK.ContextType) -> RookMotionSDK.RMTrainingInfo?
   public func getTraining(by start: Swift.String, context: RookMotionSDK.ContextType, completion: @escaping (RookMotionSDK.RMTrainingInfo?) -> Swift.Void)
@@ -1341,6 +1342,9 @@ public struct RMUserDTO {
 }
 @objc @_inheritsConvenienceInitializers public class RMCommunicationManager : ObjectiveC.NSObject {
   public static let shared: RookMotionSDK.RMCommunicationManager
+  public var session: WatchConnectivity.WCSession {
+    get
+  }
   weak public var delegate: RookMotionSDK.CommunicationDelegate?
   @objc override dynamic public init()
   public func configureSession()
@@ -1426,6 +1430,7 @@ extension RookMotionSDK.RMCommunicationManager : WatchConnectivity.WCSessionDele
   public var description: Swift.String {
     get
   }
+  public static func buildFromEncodedString(jsonString: Swift.String?) -> RookMotionSDK.RMTrainingInfo?
   @objc deinit
   public func encode(to encoder: Swift.Encoder) throws
   required public init(from decoder: Swift.Decoder) throws

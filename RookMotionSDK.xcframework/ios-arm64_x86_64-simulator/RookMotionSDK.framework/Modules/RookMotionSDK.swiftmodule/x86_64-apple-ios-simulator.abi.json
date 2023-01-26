@@ -40623,6 +40623,49 @@
           },
           {
             "kind": "Function",
+            "name": "storeTraining",
+            "printedName": "storeTraining(_:completion:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "RMTrainingInfo",
+                "printedName": "RookMotionSDK.RMTrainingInfo",
+                "usr": "s:13RookMotionSDK14RMTrainingInfoC"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "() -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13RookMotionSDK16RMStorageManagerC13storeTraining_10completionyAA14RMTrainingInfoC_yyctF",
+            "mangledName": "$s13RookMotionSDK16RMStorageManagerC13storeTraining_10completionyAA14RMTrainingInfoC_yyctF",
+            "moduleName": "RookMotionSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
             "name": "getAllTrainingInfoRecords",
             "printedName": "getAllTrainingInfoRecords(context:)",
             "children": [
@@ -48332,6 +48375,46 @@
           },
           {
             "kind": "Var",
+            "name": "session",
+            "printedName": "session",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "WCSession",
+                "printedName": "WatchConnectivity.WCSession",
+                "usr": "c:objc(cs)WCSession"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13RookMotionSDK22RMCommunicationManagerC7sessionSo9WCSessionCvp",
+            "mangledName": "$s13RookMotionSDK22RMCommunicationManagerC7sessionSo9WCSessionCvp",
+            "moduleName": "RookMotionSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "WCSession",
+                    "printedName": "WatchConnectivity.WCSession",
+                    "usr": "c:objc(cs)WCSession"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13RookMotionSDK22RMCommunicationManagerC7sessionSo9WCSessionCvg",
+                "mangledName": "$s13RookMotionSDK22RMCommunicationManagerC7sessionSo9WCSessionCvg",
+                "moduleName": "RookMotionSDK",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
             "name": "delegate",
             "printedName": "delegate",
             "children": [
@@ -54843,6 +54926,51 @@
                 "accessorKind": "get"
               }
             ]
+          },
+          {
+            "kind": "Function",
+            "name": "buildFromEncodedString",
+            "printedName": "buildFromEncodedString(jsonString:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "RookMotionSDK.RMTrainingInfo?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "RMTrainingInfo",
+                    "printedName": "RookMotionSDK.RMTrainingInfo",
+                    "usr": "s:13RookMotionSDK14RMTrainingInfoC"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13RookMotionSDK14RMTrainingInfoC22buildFromEncodedString04jsonI0ACSgSSSg_tFZ",
+            "mangledName": "$s13RookMotionSDK14RMTrainingInfoC22buildFromEncodedString04jsonI0ACSgSSSg_tFZ",
+            "moduleName": "RookMotionSDK",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
           },
           {
             "kind": "Constructor",
@@ -93246,14 +93374,14 @@
     {
       "filePath": "\/Users\/franciscoguerreroescamilla\/Developer\/RookMotion\/iosSDK\/RookMotionSDK\/RookMotionSDK\/Source\/RookMotionLink\/Storage\/RMStorageManager.swift",
       "kind": "StringLiteral",
-      "offset": 10230,
+      "offset": 10572,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/franciscoguerreroescamilla\/Developer\/RookMotion\/iosSDK\/RookMotionSDK\/RookMotionSDK\/Source\/RookMotionLink\/Storage\/RMStorageManager.swift",
       "kind": "StringLiteral",
-      "offset": 11033,
+      "offset": 11375,
       "length": 2,
       "value": "\"\""
     },
@@ -93491,7 +93619,7 @@
     {
       "filePath": "\/Users\/franciscoguerreroescamilla\/Developer\/RookMotion\/iosSDK\/RookMotionSDK\/RookMotionSDK\/Source\/RookMotionLink\/WatchCommunication\/RMCommunicationManager.swift",
       "kind": "Dictionary",
-      "offset": 3930,
+      "offset": 3805,
       "length": 3,
       "value": "[]"
     },
