@@ -92549,8 +92549,8 @@
       "filePath": "\/Users\/franciscoguerreroescamilla\/Developer\/RookMotion\/iosSDK\/RookMotionSDK\/RookMotionSDK\/Source\/RookMotionLink\/Master\/RMValidations.swift",
       "kind": "StringLiteral",
       "offset": 324,
-      "length": 16,
-      "value": "\"isInvalidToken\""
+      "length": 20,
+      "value": "\"RookisInvalidToken\""
     },
     {
       "filePath": "\/Users\/franciscoguerreroescamilla\/Developer\/RookMotion\/iosSDK\/RookMotionSDK\/RookMotionSDK\/Source\/RookMotionLink\/Helpers\/RMExtensions.swift",
