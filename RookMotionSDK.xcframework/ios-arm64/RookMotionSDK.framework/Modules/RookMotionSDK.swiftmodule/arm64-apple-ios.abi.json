@@ -18904,6 +18904,225 @@
         ]
       },
       {
+        "kind": "TypeDecl",
+        "name": "RMErrors",
+        "printedName": "RMErrors",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "userEmpty",
+            "printedName": "userEmpty",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(RookMotionSDK.RMErrors.Type) -> RookMotionSDK.RMErrors",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "RMErrors",
+                    "printedName": "RookMotionSDK.RMErrors",
+                    "usr": "s:13RookMotionSDK8RMErrorsO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "RookMotionSDK.RMErrors.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "RMErrors",
+                        "printedName": "RookMotionSDK.RMErrors",
+                        "usr": "s:13RookMotionSDK8RMErrorsO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:13RookMotionSDK8RMErrorsO9userEmptyyA2CmF",
+            "mangledName": "$s13RookMotionSDK8RMErrorsO9userEmptyyA2CmF",
+            "moduleName": "RookMotionSDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "uuidSensorEmpty",
+            "printedName": "uuidSensorEmpty",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(RookMotionSDK.RMErrors.Type) -> RookMotionSDK.RMErrors",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "RMErrors",
+                    "printedName": "RookMotionSDK.RMErrors",
+                    "usr": "s:13RookMotionSDK8RMErrorsO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "RookMotionSDK.RMErrors.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "RMErrors",
+                        "printedName": "RookMotionSDK.RMErrors",
+                        "usr": "s:13RookMotionSDK8RMErrorsO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:13RookMotionSDK8RMErrorsO15uuidSensorEmptyyA2CmF",
+            "mangledName": "$s13RookMotionSDK8RMErrorsO15uuidSensorEmptyyA2CmF",
+            "moduleName": "RookMotionSDK",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "RookMotionSDK.RMErrors?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "RMErrors",
+                    "printedName": "RookMotionSDK.RMErrors",
+                    "usr": "s:13RookMotionSDK8RMErrorsO"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:13RookMotionSDK8RMErrorsO8rawValueACSgSS_tcfc",
+            "mangledName": "$s13RookMotionSDK8RMErrorsO8rawValueACSgSS_tcfc",
+            "moduleName": "RookMotionSDK",
+            "implicit": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13RookMotionSDK8RMErrorsO8rawValueSSvp",
+            "mangledName": "$s13RookMotionSDK8RMErrorsO8rawValueSSvp",
+            "moduleName": "RookMotionSDK",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13RookMotionSDK8RMErrorsO8rawValueSSvg",
+                "mangledName": "$s13RookMotionSDK8RMErrorsO8rawValueSSvg",
+                "moduleName": "RookMotionSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:13RookMotionSDK8RMErrorsO",
+        "mangledName": "$s13RookMotionSDK8RMErrorsO",
+        "moduleName": "RookMotionSDK",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "enumRawTypeName": "String",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Error",
+            "printedName": "Error",
+            "usr": "s:s5ErrorP",
+            "mangledName": "$ss5ErrorP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          }
+        ]
+      },
+      {
         "kind": "Var",
         "name": "RM",
         "printedName": "RM",
@@ -19304,6 +19523,64 @@
             "declAttributes": [
               "AccessControl",
               "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "deleteSensor",
+            "printedName": "deleteSensor(sensor:completion:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "RMSensorAPI",
+                "printedName": "RookMotionSDK.RMSensorAPI",
+                "usr": "s:13RookMotionSDK11RMSensorAPIC"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Swift.Result<Swift.Bool, Swift.Error>) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Result",
+                    "printedName": "Swift.Result<Swift.Bool, Swift.Error>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Bool",
+                        "printedName": "Swift.Bool",
+                        "usr": "s:Sb"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Error",
+                        "printedName": "Swift.Error",
+                        "usr": "s:s5ErrorP"
+                      }
+                    ],
+                    "usr": "s:s6ResultO"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13RookMotionSDK7RMClassC12deleteSensor6sensor10completionyAA11RMSensorAPIC_ys6ResultOySbs5Error_pGctF",
+            "mangledName": "$s13RookMotionSDK7RMClassC12deleteSensor6sensor10completionyAA11RMSensorAPIC_ys6ResultOySbs5Error_pGctF",
+            "moduleName": "RookMotionSDK",
+            "declAttributes": [
+              "AccessControl"
             ],
             "funcSelfKind": "NonMutating"
           },
@@ -70620,6 +70897,49 @@
       },
       {
         "kind": "TypeDecl",
+        "name": "RMTrainingSensorCallBack",
+        "printedName": "RMTrainingSensorCallBack",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "sensorDidDisconnect",
+            "printedName": "sensorDidDisconnect(sensor:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CBPeripheral",
+                "printedName": "CoreBluetooth.CBPeripheral",
+                "usr": "c:objc(cs)CBPeripheral"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13RookMotionSDK24RMTrainingSensorCallBackP19sensorDidDisconnect0H0ySo12CBPeripheralC_tF",
+            "mangledName": "$s13RookMotionSDK24RMTrainingSensorCallBackP19sensorDidDisconnect0H0ySo12CBPeripheralC_tF",
+            "moduleName": "RookMotionSDK",
+            "genericSig": "<τ_0_0 where τ_0_0 : RookMotionSDK.RMTrainingSensorCallBack>",
+            "sugared_genericSig": "<Self where Self : RookMotionSDK.RMTrainingSensorCallBack>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:13RookMotionSDK24RMTrainingSensorCallBackP",
+        "mangledName": "$s13RookMotionSDK24RMTrainingSensorCallBackP",
+        "moduleName": "RookMotionSDK",
+        "genericSig": "<τ_0_0 : AnyObject>",
+        "sugared_genericSig": "<Self : AnyObject>",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
         "name": "RMTrainingManager",
         "printedName": "RMTrainingManager",
         "children": [
@@ -71792,6 +72112,110 @@
                 "declKind": "Accessor",
                 "usr": "s:13RookMotionSDK17RMTrainingManagerC13timerWatchDogSo7NSTimerCSgvM",
                 "mangledName": "$s13RookMotionSDK17RMTrainingManagerC13timerWatchDogSo7NSTimerCSgvM",
+                "moduleName": "RookMotionSDK",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "disconnectionCallBack",
+            "printedName": "disconnectionCallBack",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "WeakStorage",
+                "printedName": "RookMotionSDK.RMTrainingSensorCallBack?"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13RookMotionSDK17RMTrainingManagerC21disconnectionCallBackAA0d6SensorgH0_pSgvp",
+            "mangledName": "$s13RookMotionSDK17RMTrainingManagerC21disconnectionCallBackAA0d6SensorgH0_pSgvp",
+            "moduleName": "RookMotionSDK",
+            "declAttributes": [
+              "Custom",
+              "HasInitialValue",
+              "HasStorage",
+              "ReferenceOwnership",
+              "AccessControl"
+            ],
+            "ownership": 1,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "RookMotionSDK.RMTrainingSensorCallBack?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "RMTrainingSensorCallBack",
+                        "printedName": "RookMotionSDK.RMTrainingSensorCallBack",
+                        "usr": "s:13RookMotionSDK24RMTrainingSensorCallBackP"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13RookMotionSDK17RMTrainingManagerC21disconnectionCallBackAA0d6SensorgH0_pSgvg",
+                "mangledName": "$s13RookMotionSDK17RMTrainingManagerC21disconnectionCallBackAA0d6SensorgH0_pSgvg",
+                "moduleName": "RookMotionSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "RookMotionSDK.RMTrainingSensorCallBack?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "RMTrainingSensorCallBack",
+                        "printedName": "RookMotionSDK.RMTrainingSensorCallBack",
+                        "usr": "s:13RookMotionSDK24RMTrainingSensorCallBackP"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13RookMotionSDK17RMTrainingManagerC21disconnectionCallBackAA0d6SensorgH0_pSgvs",
+                "mangledName": "$s13RookMotionSDK17RMTrainingManagerC21disconnectionCallBackAA0d6SensorgH0_pSgvs",
+                "moduleName": "RookMotionSDK",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13RookMotionSDK17RMTrainingManagerC21disconnectionCallBackAA0d6SensorgH0_pSgvM",
+                "mangledName": "$s13RookMotionSDK17RMTrainingManagerC21disconnectionCallBackAA0d6SensorgH0_pSgvM",
                 "moduleName": "RookMotionSDK",
                 "implicit": true,
                 "accessorKind": "_modify"
@@ -76668,6 +77092,55 @@
           },
           {
             "kind": "Function",
+            "name": "createSensor",
+            "printedName": "createSensor(sensor:context:completion:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "RMSensorDTO",
+                "printedName": "RookMotionSDK.RMSensorDTO",
+                "usr": "s:13RookMotionSDK11RMSensorDTOV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ContextType",
+                "printedName": "RookMotionSDK.ContextType",
+                "usr": "s:13RookMotionSDK11ContextTypeO"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "() -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13RookMotionSDK0A13SensorStorageC06createD06sensor7context10completionyAA11RMSensorDTOV_AA11ContextTypeOyyctF",
+            "mangledName": "$s13RookMotionSDK0A13SensorStorageC06createD06sensor7context10completionyAA11RMSensorDTOV_AA11ContextTypeOyyctF",
+            "moduleName": "RookMotionSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
             "name": "deleteSensor",
             "printedName": "deleteSensor(sensor:context:)",
             "children": [
@@ -76696,6 +77169,55 @@
             "declAttributes": [
               "AccessControl",
               "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "deleteSensor",
+            "printedName": "deleteSensor(sensor:context:completion:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "RMSensorDTO",
+                "printedName": "RookMotionSDK.RMSensorDTO",
+                "usr": "s:13RookMotionSDK11RMSensorDTOV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ContextType",
+                "printedName": "RookMotionSDK.ContextType",
+                "usr": "s:13RookMotionSDK11ContextTypeO"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "() -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13RookMotionSDK0A13SensorStorageC06deleteD06sensor7context10completionyAA11RMSensorDTOV_AA11ContextTypeOyyctF",
+            "mangledName": "$s13RookMotionSDK0A13SensorStorageC06deleteD06sensor7context10completionyAA11RMSensorDTOV_AA11ContextTypeOyyctF",
+            "moduleName": "RookMotionSDK",
+            "declAttributes": [
+              "AccessControl"
             ],
             "funcSelfKind": "NonMutating"
           },
@@ -76734,6 +77256,55 @@
           },
           {
             "kind": "Function",
+            "name": "updateSensor",
+            "printedName": "updateSensor(sensor:context:completion:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "RMSensorDTO",
+                "printedName": "RookMotionSDK.RMSensorDTO",
+                "usr": "s:13RookMotionSDK11RMSensorDTOV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ContextType",
+                "printedName": "RookMotionSDK.ContextType",
+                "usr": "s:13RookMotionSDK11ContextTypeO"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "() -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13RookMotionSDK0A13SensorStorageC06updateD06sensor7context10completionyAA11RMSensorDTOV_AA11ContextTypeOyyctF",
+            "mangledName": "$s13RookMotionSDK0A13SensorStorageC06updateD06sensor7context10completionyAA11RMSensorDTOV_AA11ContextTypeOyyctF",
+            "moduleName": "RookMotionSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
             "name": "readSensors",
             "printedName": "readSensors(context:)",
             "children": [
@@ -76765,6 +77336,58 @@
             "declAttributes": [
               "AccessControl",
               "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "readSensors",
+            "printedName": "readSensors(context:completion:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ContextType",
+                "printedName": "RookMotionSDK.ContextType",
+                "usr": "s:13RookMotionSDK11ContextTypeO"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "([RookMotionSDK.RMSensorDTO]) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[RookMotionSDK.RMSensorDTO]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "RMSensorDTO",
+                        "printedName": "RookMotionSDK.RMSensorDTO",
+                        "usr": "s:13RookMotionSDK11RMSensorDTOV"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13RookMotionSDK0A13SensorStorageC11readSensors7context10completionyAA11ContextTypeO_ySayAA11RMSensorDTOVGctF",
+            "mangledName": "$s13RookMotionSDK0A13SensorStorageC11readSensors7context10completionyAA11ContextTypeO_ySayAA11RMSensorDTOVGctF",
+            "moduleName": "RookMotionSDK",
+            "declAttributes": [
+              "AccessControl"
             ],
             "funcSelfKind": "NonMutating"
           },
@@ -92665,6 +93288,41 @@
       "value": "\"contact_person_name\""
     },
     {
+      "filePath": "\/Users\/franciscoguerreroescamilla\/Developer\/RookMotion\/iosSDK\/RookMotionSDK\/RookMotionSDK\/Source\/RookMotionLink\/Master\/RMClass.swift",
+      "kind": "StringLiteral",
+      "offset": 170,
+      "length": 41,
+      "value": "\"Any user was found in the local storage\""
+    },
+    {
+      "filePath": "\/Users\/franciscoguerreroescamilla\/Developer\/RookMotion\/iosSDK\/RookMotionSDK\/RookMotionSDK\/Source\/RookMotionLink\/Master\/RMClass.swift",
+      "kind": "StringLiteral",
+      "offset": 266,
+      "length": 41,
+      "value": "\"The uuid of the sensor is nill or empty\""
+    },
+    {
+      "filePath": "\/Users\/franciscoguerreroescamilla\/Developer\/RookMotion\/iosSDK\/RookMotionSDK\/RookMotionSDK\/Source\/RookMotionLink\/Master\/RMClass.swift",
+      "kind": "StringLiteral",
+      "offset": 170,
+      "length": 41,
+      "value": "\"Any user was found in the local storage\""
+    },
+    {
+      "filePath": "\/Users\/franciscoguerreroescamilla\/Developer\/RookMotion\/iosSDK\/RookMotionSDK\/RookMotionSDK\/Source\/RookMotionLink\/Master\/RMClass.swift",
+      "kind": "StringLiteral",
+      "offset": 266,
+      "length": 41,
+      "value": "\"The uuid of the sensor is nill or empty\""
+    },
+    {
+      "filePath": "\/Users\/franciscoguerreroescamilla\/Developer\/RookMotion\/iosSDK\/RookMotionSDK\/RookMotionSDK\/Source\/RookMotionLink\/Master\/RMClass.swift",
+      "kind": "IntegerLiteral",
+      "offset": 732,
+      "length": 3,
+      "value": "204"
+    },
+    {
       "filePath": "\/Users\/franciscoguerreroescamilla\/Developer\/RookMotion\/iosSDK\/RookMotionSDK\/RookMotionSDK\/Source\/RookMotionLink\/Utils\/Lib\/CalculateDeltaTime.swift",
       "kind": "IntegerLiteral",
       "offset": 354,
@@ -94725,147 +95383,147 @@
     {
       "filePath": "\/Users\/franciscoguerreroescamilla\/Developer\/RookMotion\/iosSDK\/RookMotionSDK\/RookMotionSDK\/Source\/RookMotionLink\/Training\/RMTrainingManager.swift",
       "kind": "Array",
-      "offset": 723,
+      "offset": 829,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/franciscoguerreroescamilla\/Developer\/RookMotion\/iosSDK\/RookMotionSDK\/RookMotionSDK\/Source\/RookMotionLink\/Training\/RMTrainingManager.swift",
       "kind": "Array",
-      "offset": 1755,
+      "offset": 1861,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/franciscoguerreroescamilla\/Developer\/RookMotion\/iosSDK\/RookMotionSDK\/RookMotionSDK\/Source\/RookMotionLink\/Training\/RMTrainingManager.swift",
       "kind": "Array",
-      "offset": 1802,
+      "offset": 1908,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/franciscoguerreroescamilla\/Developer\/RookMotion\/iosSDK\/RookMotionSDK\/RookMotionSDK\/Source\/RookMotionLink\/Training\/RMTrainingManager.swift",
       "kind": "Array",
-      "offset": 1849,
+      "offset": 1955,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/franciscoguerreroescamilla\/Developer\/RookMotion\/iosSDK\/RookMotionSDK\/RookMotionSDK\/Source\/RookMotionLink\/Training\/RMTrainingManager.swift",
       "kind": "Array",
-      "offset": 1896,
+      "offset": 2002,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/franciscoguerreroescamilla\/Developer\/RookMotion\/iosSDK\/RookMotionSDK\/RookMotionSDK\/Source\/RookMotionLink\/Training\/RMTrainingManager.swift",
       "kind": "StringLiteral",
-      "offset": 2088,
+      "offset": 2194,
       "length": 21,
       "value": "\"RookMotion_logo.png\""
     },
     {
       "filePath": "\/Users\/franciscoguerreroescamilla\/Developer\/RookMotion\/iosSDK\/RookMotionSDK\/RookMotionSDK\/Source\/RookMotionLink\/Training\/RMTrainingManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 2182,
+      "offset": 2288,
       "length": 3,
       "value": "130"
     },
     {
       "filePath": "\/Users\/franciscoguerreroescamilla\/Developer\/RookMotion\/iosSDK\/RookMotionSDK\/RookMotionSDK\/Source\/RookMotionLink\/Training\/RMTrainingManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 2190,
+      "offset": 2296,
       "length": 2,
       "value": "10"
     },
     {
       "filePath": "\/Users\/franciscoguerreroescamilla\/Developer\/RookMotion\/iosSDK\/RookMotionSDK\/RookMotionSDK\/Source\/RookMotionLink\/Training\/RMTrainingManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 2201,
+      "offset": 2307,
       "length": 3,
       "value": "100"
     },
     {
       "filePath": "\/Users\/franciscoguerreroescamilla\/Developer\/RookMotion\/iosSDK\/RookMotionSDK\/RookMotionSDK\/Source\/RookMotionLink\/Training\/RMTrainingManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 2214,
+      "offset": 2320,
       "length": 2,
       "value": "25"
     },
     {
       "filePath": "\/Users\/franciscoguerreroescamilla\/Developer\/RookMotion\/iosSDK\/RookMotionSDK\/RookMotionSDK\/Source\/RookMotionLink\/Training\/RMTrainingManager.swift",
       "kind": "StringLiteral",
-      "offset": 2368,
+      "offset": 2474,
       "length": 18,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/franciscoguerreroescamilla\/Developer\/RookMotion\/iosSDK\/RookMotionSDK\/RookMotionSDK\/Source\/RookMotionLink\/Training\/RMTrainingManager.swift",
       "kind": "StringLiteral",
-      "offset": 2385,
+      "offset": 2491,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/franciscoguerreroescamilla\/Developer\/RookMotion\/iosSDK\/RookMotionSDK\/RookMotionSDK\/Source\/RookMotionLink\/Training\/RMTrainingManager.swift",
       "kind": "FloatLiteral",
-      "offset": 2322,
+      "offset": 2428,
       "length": 3,
       "value": "0.0"
     },
     {
       "filePath": "\/Users\/franciscoguerreroescamilla\/Developer\/RookMotion\/iosSDK\/RookMotionSDK\/RookMotionSDK\/Source\/RookMotionLink\/Training\/RMTrainingManager.swift",
       "kind": "StringLiteral",
-      "offset": 2462,
+      "offset": 2568,
       "length": 45,
       "value": "\"Delta Steps ahora \""
     },
     {
       "filePath": "\/Users\/franciscoguerreroescamilla\/Developer\/RookMotion\/iosSDK\/RookMotionSDK\/RookMotionSDK\/Source\/RookMotionLink\/Training\/RMTrainingManager.swift",
       "kind": "StringLiteral",
-      "offset": 2506,
+      "offset": 2612,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/franciscoguerreroescamilla\/Developer\/RookMotion\/iosSDK\/RookMotionSDK\/RookMotionSDK\/Source\/RookMotionLink\/Training\/RMTrainingManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 2434,
+      "offset": 2540,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/franciscoguerreroescamilla\/Developer\/RookMotion\/iosSDK\/RookMotionSDK\/RookMotionSDK\/Source\/RookMotionLink\/Training\/RMTrainingManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 2554,
+      "offset": 2660,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/franciscoguerreroescamilla\/Developer\/RookMotion\/iosSDK\/RookMotionSDK\/RookMotionSDK\/Source\/RookMotionLink\/Training\/RMTrainingManager.swift",
       "kind": "Array",
-      "offset": 2727,
+      "offset": 2833,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/franciscoguerreroescamilla\/Developer\/RookMotion\/iosSDK\/RookMotionSDK\/RookMotionSDK\/Source\/RookMotionLink\/Training\/RMTrainingManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 2825,
+      "offset": 2931,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/franciscoguerreroescamilla\/Developer\/RookMotion\/iosSDK\/RookMotionSDK\/RookMotionSDK\/Source\/RookMotionLink\/Training\/RMTrainingManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 2935,
+      "offset": 3041,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/franciscoguerreroescamilla\/Developer\/RookMotion\/iosSDK\/RookMotionSDK\/RookMotionSDK\/Source\/RookMotionLink\/Training\/RMTrainingManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 3032,
+      "offset": 3138,
       "length": 4,
       "value": "true"
     },

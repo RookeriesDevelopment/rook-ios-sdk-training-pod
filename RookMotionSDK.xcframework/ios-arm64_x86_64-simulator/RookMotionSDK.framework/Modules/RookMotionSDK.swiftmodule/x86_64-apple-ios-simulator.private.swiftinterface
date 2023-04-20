@@ -580,6 +580,15 @@ public struct RMStepDataRecordsTransfer : Swift.Codable {
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }
+public enum RMErrors : Swift.String, Swift.Error {
+  case userEmpty
+  case uuidSensorEmpty
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
 public let RM: RookMotionSDK.RMClass
 public class RMClass {
   public init()
@@ -589,6 +598,7 @@ public class RMClass {
   public func getTrainingTypes(completion: @escaping (RookMotionSDK.RMResponse, [RookMotionSDK.RMTrainingType]?) -> Swift.Void)
   public func configureUserMetrics(completion: @escaping (RookMotionSDK.RMResponse) -> Swift.Void)
   public func addSensor(sensor: RookMotionSDK.RMSensorAPI, completion: @escaping (RookMotionSDK.RMResponse, Swift.String?) -> Swift.Void)
+  public func deleteSensor(sensor: RookMotionSDK.RMSensorAPI, completion: @escaping (Swift.Result<Swift.Bool, Swift.Error>) -> Swift.Void)
   public func getSensorUUID(sensorName: Swift.String, completion: @escaping (Swift.String) -> Swift.Void)
   public func updateUserProfile(user: RookMotionSDK.RMUser, completion: @escaping (RookMotionSDK.RMResponse) -> Swift.Void)
   public func uploadPendingSensors(completion: @escaping (RookMotionSDK.RMResponse?) -> Swift.Void)
@@ -1822,6 +1832,9 @@ public protocol RMTrainingCallback {
   func onHeartRateDataReceived(hrData: RookMotionSDK.RMHrDerivedRecord)
   func onStepsDataReceived(stepData: RookMotionSDK.RMStepDerivedRecord)
 }
+public protocol RMTrainingSensorCallBack : AnyObject {
+  func sensorDidDisconnect(sensor: CoreBluetooth.CBPeripheral)
+}
 @objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class RMTrainingManager : UIKit.UIViewController, RookMotionSDK.RMSensorConnectionCallback, RookMotionSDK.RMSensorCallback, RookMotionSDK.RMSensorDiscoveryCallback {
   @_Concurrency.MainActor(unsafe) public var trainingSensor: CoreBluetooth.CBPeripheral?
   @_Concurrency.MainActor(unsafe) open var sensorList: [CoreBluetooth.CBPeripheral] {
@@ -1845,6 +1858,7 @@ public protocol RMTrainingCallback {
   @_Concurrency.MainActor(unsafe) open var firstStart: Swift.Bool
   @_Concurrency.MainActor(unsafe) public var timer: Foundation.Timer
   @_Concurrency.MainActor(unsafe) weak public var timerWatchDog: Foundation.Timer?
+  @_Concurrency.MainActor(unsafe) weak public var disconnectionCallBack: RookMotionSDK.RMTrainingSensorCallBack?
   @_Concurrency.MainActor(unsafe) open func setTrainingViewElements()
   @_Concurrency.MainActor(unsafe) open func handleBadBandContact()
   @_Concurrency.MainActor(unsafe) open func handleSensorDisconnected()
@@ -1954,9 +1968,13 @@ public enum SensorErrors : Swift.Error {
 public class RookSensorStorage : RookMotionSDK.RookSensorStorageProtocol {
   public init(context: RookMotionSDK.ContextType)
   public func createSensor(sensor: RookMotionSDK.RMSensorDTO, context: RookMotionSDK.ContextType)
+  public func createSensor(sensor: RookMotionSDK.RMSensorDTO, context: RookMotionSDK.ContextType, completion: @escaping () -> Swift.Void)
   public func deleteSensor(sensor: RookMotionSDK.RMSensorDTO, context: RookMotionSDK.ContextType)
+  public func deleteSensor(sensor: RookMotionSDK.RMSensorDTO, context: RookMotionSDK.ContextType, completion: @escaping () -> Swift.Void)
   public func updateSensor(sensor: RookMotionSDK.RMSensorDTO, context: RookMotionSDK.ContextType)
+  public func updateSensor(sensor: RookMotionSDK.RMSensorDTO, context: RookMotionSDK.ContextType, completion: @escaping () -> Swift.Void)
   public func readSensors(context: RookMotionSDK.ContextType) -> [RookMotionSDK.RMSensorDTO]
+  public func readSensors(context: RookMotionSDK.ContextType, completion: @escaping ([RookMotionSDK.RMSensorDTO]) -> Swift.Void)
   public func getSensorsWithoutUUID(context: RookMotionSDK.ContextType) -> [RookMotionSDK.RMSensorDTO]
   public func getSensorsWithoutUUID(context: RookMotionSDK.ContextType, completion: @escaping ([RookMotionSDK.RMSensorDTO]) -> Swift.Void)
   public func getSensorUUID(sensorName: Swift.String, context: RookMotionSDK.ContextType) -> Swift.String
@@ -2344,6 +2362,9 @@ public enum ContextType {
 extension RookMotionSDK.RMHeartRateRecordsDTO.CodingKeys : Swift.Equatable {}
 extension RookMotionSDK.RMHeartRateRecordsDTO.CodingKeys : Swift.Hashable {}
 extension RookMotionSDK.RMHeartRateRecordsDTO.CodingKeys : Swift.RawRepresentable {}
+extension RookMotionSDK.RMErrors : Swift.Equatable {}
+extension RookMotionSDK.RMErrors : Swift.Hashable {}
+extension RookMotionSDK.RMErrors : Swift.RawRepresentable {}
 extension RookMotionSDK.RoundingPrecision : Swift.Equatable {}
 extension RookMotionSDK.RoundingPrecision : Swift.Hashable {}
 extension RookMotionSDK.RMBasalCalculationResult : Swift.Equatable {}
