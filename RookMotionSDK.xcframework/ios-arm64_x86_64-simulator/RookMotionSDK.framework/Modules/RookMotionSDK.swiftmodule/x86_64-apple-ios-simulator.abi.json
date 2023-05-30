@@ -72496,6 +72496,7 @@
             "usr": "s:13RookMotionSDK17RMTrainingManagerC17onSensorConnected02rmG0ySo12CBPeripheralC_tF",
             "mangledName": "$s13RookMotionSDK17RMTrainingManagerC17onSensorConnected02rmG0ySo12CBPeripheralC_tF",
             "moduleName": "RookMotionSDK",
+            "isOpen": true,
             "declAttributes": [
               "Custom",
               "AccessControl",
@@ -72524,6 +72525,7 @@
             "usr": "s:13RookMotionSDK17RMTrainingManagerC20onSensorDisconnected10peripheralySo12CBPeripheralC_tF",
             "mangledName": "$s13RookMotionSDK17RMTrainingManagerC20onSensorDisconnected10peripheralySo12CBPeripheralC_tF",
             "moduleName": "RookMotionSDK",
+            "isOpen": true,
             "declAttributes": [
               "Custom",
               "AccessControl"
