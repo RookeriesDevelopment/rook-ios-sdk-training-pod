@@ -2,12 +2,12 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "RookMotionSDK"
-  spec.version      = "1.0.22"
+  spec.version      = "1.0.23"
   spec.summary      = "RookMotion iOS Lib"
 
   spec.description  = "RookMotion iOS sdk allows the implementation of the RookMotion functionalities required to add training measurement, tracking, and analysis to an iOS APP"
 
-  spec.homepage     = "https://gitlab.com/rooklinkforclients/RookMotion-SDK-Cocoa.git"
+  spec.homepage     = "https://github.com/RookeriesDevelopment/rook-ios-sdk-training-pod.git"
 
 
 
@@ -22,13 +22,10 @@ Pod::Spec.new do |spec|
   spec.swift_version = '5.0'
 
 
-  spec.source       = { :git => "https://gitlab.com/rooklinkforclients/RookMotion-SDK-Cocoa.git", :tag => "1.0.22" }
+  spec.source       = { :git => "https://github.com/RookeriesDevelopment/rook-ios-sdk-training-pod.git", :tag => "1.0.23" }
 
   spec.frameworks  = "SystemConfiguration", "CoreBluetooth", "UIKit", "CoreData"
 
   spec.ios.vendored_frameworks = 'RookMotionSDK.xcframework'
-
-  spec.dependency 'SwiftyJSON', '5.0.1'
-  spec.dependency 'Alamofire', '5.6.2'
 
 end

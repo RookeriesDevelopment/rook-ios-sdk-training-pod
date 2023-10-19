@@ -14,27 +14,27 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		ZJy9c0jsGWudc9D28FK2jqsVszc=
+		cLr+2j8jysbu9iFmizny7tZvnQA=
 		</data>
 		<key>Modules/RookMotionSDK.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		ep+Q4ZUHX0dYmXAuyTml9Yb2Lu4=
+		SqIF3r+Dfk8dsGMBCYm4y23niWY=
 		</data>
 		<key>Modules/RookMotionSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		oYcBln4h0bOnSRklb3VyXNIag1w=
+		7LxSQSd3yGV6dPxQeF/CpoMhGp4=
 		</data>
 		<key>Modules/RookMotionSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		AMA6YXS/8mB8GE/3+oGIq8Gsi6U=
+		VFuIJDF6/UvlgJB6VZLHXcaHMXI=
 		</data>
 		<key>Modules/RookMotionSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		oYcBln4h0bOnSRklb3VyXNIag1w=
+		7LxSQSd3yGV6dPxQeF/CpoMhGp4=
 		</data>
 		<key>Modules/RookMotionSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		kUuYq+kFaoARzrbiprwO6OOD3E0=
+		J7OjY4S62TELhPp17x3YZJmzk1U=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -58,7 +58,7 @@
 		</data>
 		<key>RookContainer.momd/VersionInfo.plist</key>
 		<data>
-		olk+q/Tjg8EtVzIPmL/r4pwNW44=
+		5dfXmfigJNf4EljIT+3qqUtud+s=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -81,35 +81,35 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			0iXXpegL5kMeibBr536Zi1S3dDnU55JTRxY8w0LHX6U=
+			mgUCdJEQZCvi6eNEdGfTIcaGwcksdvWre1UfQvW+ZjI=
 			</data>
 		</dict>
 		<key>Modules/RookMotionSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			/4i/BxKaAWt8T27PaH54dUwFmsiSbLfImRA4pHcYrSg=
+			4ZheJ+1Ufh5xBiRyoepYZw7Qlse//0s3OhH6dvIEf0U=
 			</data>
 		</dict>
 		<key>Modules/RookMotionSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			vG4JEeWyJTMeW3ISm+OqSmJ2HQps1Srv/Sy2ZM3/7KY=
+			9aqd6LIBPkLYdjCahss5YMs5R7eNARbQrz70TVzpVss=
 			</data>
 		</dict>
 		<key>Modules/RookMotionSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			/4i/BxKaAWt8T27PaH54dUwFmsiSbLfImRA4pHcYrSg=
+			4ZheJ+1Ufh5xBiRyoepYZw7Qlse//0s3OhH6dvIEf0U=
 			</data>
 		</dict>
 		<key>Modules/RookMotionSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			FSDqlC+cDFyrUOj8jnXtILlFQ6ERJts99rdU2muSO9w=
+			pseLRvX5VmxrQjVZUfxQERSU/WSnotihZ38KXGO9WUU=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -151,7 +151,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			jSJ+TL6JsAy5CruOr9qoTJ6VcdJ0OmpeoATzBhVYzek=
+			IbF45xs1X3JOteOW8fw9ofcTe0Bv0H9NASM99uwCfho=
 			</data>
 		</dict>
 	</dict>
