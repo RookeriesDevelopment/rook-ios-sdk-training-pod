@@ -14,7 +14,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		jfxbEzVoK2hxAAdsbnlkzdXHLT4=
+		jKsVRwwGEtnwE8B65Iy/WLGNj8A=
 		</data>
 		<key>Modules/RookMotionSDK.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
@@ -59,6 +59,10 @@
 		<key>Modules/module.modulemap</key>
 		<data>
 		cRcuEdalDCOir5BuzCFaEDK9uSI=
+		</data>
+		<key>PrivacyInfo.xcprivacy</key>
+		<data>
+		o8RC9VHfPEvA66TEgh5o4d/ZT+4=
 		</data>
 		<key>RookContainer.momd/RookContainer 2.mom</key>
 		<data>
@@ -172,6 +176,13 @@
 			<key>hash2</key>
 			<data>
 			c8c208jkab/GuNE2C2kwfTa4aJGNEkC6DvNMblJZQvE=
+			</data>
+		</dict>
+		<key>PrivacyInfo.xcprivacy</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			3auCUp8m8vdoISAEktM5Q0md95vO8ijdAfiqgEp3JVw=
 			</data>
 		</dict>
 		<key>RookContainer.momd/RookContainer 2.mom</key>
